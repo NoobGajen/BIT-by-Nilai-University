@@ -1,6 +1,4 @@
-# DataBase Exam Question
-
-## Paper 1
+# Paper 1
 
 **1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
 
