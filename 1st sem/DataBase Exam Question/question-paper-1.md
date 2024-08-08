@@ -326,7 +326,7 @@ Specifies which column to use for joining two tables. It matches rows based on t
 | 6       | NU1564   | 3005      | 06/01/2016 | 28/06/2016 |
 | 7       | NU1178   | 3006      | 06/01/2016 |            |
 
-#### **5.B.i. Count the Number of Instructors with Status 'Temp Stop'**
+#### **5.B.i. Count the Number of Instructors with Status 'Temp Stop'. Rename the title as 'NUMTSTOP'**
 
 **Answer:**
 
@@ -343,7 +343,9 @@ WHERE Status = 'Temp Stop';
 
 **Note:** You Don't need to write these explanation in exam 😊
 
-#### **5.B.ii. List Out the Instructors Who Are Active**
+<figure><img src=".gitbook/assets/5.B.i.png" alt=""><figcaption></figcaption></figure>
+
+#### **5.B.ii. List Out the Instructors Who Are "Active".**
 
 **Answer:**
 
@@ -359,12 +361,14 @@ WHERE Status = 'Active';
 
 **Note:** You Don't need to write these explanation in exam 😊
 
+<figure><img src=".gitbook/assets/5.B.ii.png" alt=""><figcaption></figcaption></figure>
+
 #### **5.B.iii. List the `StudentID` and Student's Read Score in Descending Order**
 
 **Answer:**
 
 ```sql
-SELECT *
+SELECT StudentID, `Read`
 FROM STUDENT
 ORDER BY `Read` DESC;
 ```
@@ -374,6 +378,8 @@ ORDER BY `Read` DESC;
 * **`ORDER BY Read DESC`**: Orders the results by the `Read` column in descending order (`DESC`), so students with the highest `Read` scores appear first.
 
 **Note:** You Don't need to write these explanation in exam 😊
+
+<figure><img src=".gitbook/assets/5.B.iii.png" alt=""><figcaption></figcaption></figure>
 
 #### **5.B.iv. Count the Number of Students Who Were Taking the Adult Literacy Program in the First Five Months of the Year**
 
@@ -391,3 +397,5 @@ WHERE MONTH(StartDate) BETWEEN 1 AND 5;
 * **`WHERE MONTH(StartDate) BETWEEN 1 AND 5`**: Filters rows where the month extracted from `StartDate` is between January (1) and May (5).
 
 **Note:** You Don't need to write these explanation in exam 😊
+
+<figure><img src=".gitbook/assets/5.B.iv.png" alt=""><figcaption></figcaption></figure>
