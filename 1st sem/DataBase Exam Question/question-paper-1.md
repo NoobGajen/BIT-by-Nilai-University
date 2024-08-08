@@ -80,4 +80,4 @@ iii. **Doctor → Prescribes → Medicine:**
 
 &#x20;                           **Patient**
 
-* **Many-to-Many Relationship:** A doctor can prescribe many medicines to different patients, and each medicine can be prescribed by multiple doctors.
+* **Many-to-Many Relationship:** A doctor prescribes medicines to patients. Each prescription involves a doctor, a patient, and the medicine being prescribed. This can be seen as a relationship where one doctor can prescribe many medicines to many patients, and each patient can receive multiple prescriptions. This relationship is managed using an intermediate table that links doctors, patients, and medicines.
