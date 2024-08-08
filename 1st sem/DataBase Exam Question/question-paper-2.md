@@ -2,7 +2,7 @@
 
 ## Question 1
 
-### A. Discuss any THREE (3) current threats of modern databases. (6 MARKS)
+### 1.A.) Discuss any THREE (3) current threats of modern databases. (6 MARKS)
 
 1. **SQL Injection:** Attackers manipulate SQL queries to gain unauthorized access or make unauthorized changes to the database.
 2. **Insider Threats:** Employees or users with legitimate access to the database may misuse their privileges, either intentionally or accidentally, causing harm.
@@ -10,7 +10,7 @@
 4. **Weak Access Controls:** Poor management of user permissions can lead to unauthorized users accessing or modifying sensitive data.
 5. **Data Breaches:** Unauthorized access to sensitive data, leading to information theft or leaks.
 
-### B. Explain data redundancy with an example. (6 MARKS)
+### 1.B.) Explain data redundancy with an example. (6 MARKS)
 
 **Data Redundancy:**
 
@@ -24,7 +24,7 @@
 * If a student's address is stored in both the "Students" table and the "Enrollment" table, that's data redundancy.
 * If the student moves and only one table is updated with the new address, the database will have conflicting information, leading to errors.
 
-### C. Describe any FOUR (4) functions of a database administrator. (8 MARKS)
+### 1.C.) Describe any FOUR (4) functions of a database administrator. (8 MARKS)
 
 The person responsible for the technical management, maintenance, day-to-day operation, and security of an organization's database management system is known as a Database Administrator (DBA).
 
