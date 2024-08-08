@@ -60,3 +60,14 @@ The `FULL OUTER JOIN` clause returns all records when there is a match in either
 
 The `NATURAL JOIN` clause automatically joins two tables based on columns with the same name in both tables. It simplifies the join process by using these common columns as the join condition. **Example:** `SELECT * FROM Employees NATURAL JOIN Departments;` joins the `Employees` and `Departments` tables using columns that have the same name in both tables, like `Department_ID`.
 
+### 5.B.) Write SQL Statement for the following queries referring to table 2:
+
+&#x20;                                                                   **Table no. 2:** Customer
+
+| CustomerID | CustomerName                       | ContactName        | Address                       | City        | PostalCode | Country |
+| ---------- | ---------------------------------- | ------------------ | ----------------------------- | ----------- | ---------- | ------- |
+| 1          | Alfreds Futierkiste                | Maria Anders       | Obere Str. 57                 | Berlin      | 12209      | Germany |
+| 2          | Ana Trujillo Emparedados y Helados | Ana Trujillo       | Avda. de la Constitución 2222 | Mexico City | 05021      | Mexico  |
+| 3          | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | Mexico City | 05023      | Mexico  |
+| 4          | Around the Horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      | WA1 1DP    | UK      |
+| 5          | Berglunds snabbkop                 | Christina Berglund | Berguvsvägen 8                | Luleå       | S-958 22   | Sweden  |
