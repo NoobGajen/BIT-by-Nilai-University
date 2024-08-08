@@ -129,3 +129,5 @@ FROM Customer
 GROUP BY Country 
 HAVING NumberOfCustomers > 5;
 ```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.vi.png" alt=""><figcaption></figcaption></figure>
