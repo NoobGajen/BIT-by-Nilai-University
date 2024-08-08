@@ -102,3 +102,26 @@ Referential integrity ensures that relationships between tables remain consisten
 
 **Degree:** Degree refers to the number of attributes (columns) in a relation (table). Example: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
 
+#### **3.C)** The Selangor Stage Coach Co. provides services to the greater Selangor municipal area, including various towns around the state capital.
+
+The company owns a substantial number of buses. Each bus is allocated to a specific route, although some routes may have several buses. Each bus has a unique bus number. It is important to store information about the seating capacity and the make/type of each bus.
+
+Each route, identified by a route number, passes through a number of towns. Several routes may serve the same town. Information is available on the average number of passengers carried per day for each route.
+
+Due to the long traveling time, one or more drivers are assigned to each stage of a route, which corresponds to a journey through a town on a route. Drivers have an employee number, name, address, and sometimes a telephone number.
+
+Read the above description carefully. State appropriate assumptions and devise the corresponding ER model. (12 MARKS)
+
+**Answer:** (padhako xaina 💀💀)
+
+
+
+4.) Table 1 - Dentist Patient Appointment
+
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment Date Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | --------------------- | ----------- |
+| 1011        | Zara          | P100    | Aruna     | 12-Jan-17 10:00       | 515         |
+| 1011        | Zara          | P105    | Roziana   | 12-Jan-17 12:00       | 515         |
+| 1024        | Robin         | P108    | Andrew    | 14-Jan-17 12:00       | 510         |
+| 1032        | Wong          | P105    | Aruna     | 12-Jan-17 10:00       | 515         |
+| 1032        | Wong          | P108    | Tiagu     | 14-Jan-17 10:00       | 515         |
