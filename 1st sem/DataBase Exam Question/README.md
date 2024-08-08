@@ -2,7 +2,7 @@
 
 ## Question 1
 
-#### **1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
+### **1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
 
 1. **Data Breaches:** Unauthorized access to sensitive data, leading to information theft or leaks.
 2. **SQL Injection:** Attackers manipulate SQL queries to gain unauthorized access or make unauthorized changes to the database.
@@ -10,7 +10,7 @@
 4. **Weak Access Controls:** Poor management of user permissions can lead to unauthorized users accessing or modifying sensitive data.
 5. **Ransomware Attacks:** Malicious software that locks the database, with attackers demand for a ransom to unlock or restore access to the data.
 
-#### **1.B)** Explain THREE (3) advantages of a Database Management System (DBMS). (6 MARKS)
+### **1.B)** Explain THREE (3) advantages of a Database Management System (DBMS). (6 MARKS)
 
 1. **Data Consistency:** Ensures that data remains consistent across different applications, reducing errors or unusual problems.
 2. **Data Security:** Implements security measures like encryption and access controls to protect data from unauthorized access.
@@ -18,7 +18,7 @@
 4. **Efficient Data Management:** Improves data storage and retrieval processes, making it easier to manage large amounts of data.
 5. **Backup and Recovery:** Provides automatic backup and recovery mechanisms, ensuring data is safe and can be restored in case of failures.
 
-#### **1.C)** Describe THREE (3) functions of a data administrator. (6 MARKS)
+### **1.C)** Describe THREE (3) functions of a data administrator. (6 MARKS)
 
 1. **Database Design:** Planning the structure of the database, including tables, relationships, and data types to meet user requirements.
 2. **Backup and Recovery:** Regularly backing up the database and implementing recovery plans to restore data in case of corruption or failures.
@@ -30,7 +30,9 @@
 
 ## Question 2
 
-#### **2.A) Describe the activities performed during the following phases of the database design and development process: (8 MARKS)** i. **Requirement Analysis:**
+### **2.A) Describe the activities performed during the following phases of the database design and development process: (8 MARKS)**
+
+i. **Requirement Analysis:**
 
 * Understanding user needs and identifying the data requirements for the database.
 * Gathering details on data types, volumes, and the relationships between different data entities.
@@ -46,7 +48,9 @@ ii. **Conceptual Database Design:**
 * Ensuring that the design supports all user requirements identified in the analysis phase.
 * Reviewing and refining the conceptual model with stakeholders to ensure it meets all needs.
 
-#### **2.b) Draw an example for the following attributes: (6 MARKS)** i. **Derived attribute:**
+### **2.b) Draw an example for the following attributes: (6 MARKS)**
+
+i. **Derived attribute:**
 
 * An attribute calculated from other attributes.\
   \- Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the Date of Birth is 2000, then Age is 24.
@@ -61,7 +65,7 @@ iii. **Composite attribute:**
 * An attribute that can be divided into smaller sub-parts.
   * Example: `Full Name` can be divided into `First Name` and `Last Name`.
 
-#### **2.C) Describe the following relationships: (6 MARKS)** i. **Person → Married to → Person:**
+### **2.C) Describe the following relationships: (6 MARKS)** i. **Person → Married to → Person:**
 
 **One-to-One Relationship:** Each person is married to one other person, representing a one-to-one relationship.
 
@@ -79,7 +83,7 @@ iii. **Doctor → Prescribes → Medicine:**
 
 ## Question 3
 
-#### **3.A) Explain the following terms: (4 MARKS)**
+### **3.A) Explain the following terms: (4 MARKS)**
 
 **Answer:**
 
@@ -95,7 +99,7 @@ Entity integrity means that every table must have a primary key, and this key mu
 **4. Referential Integrity**\
 Referential integrity ensures that relationships between tables remain consistent. It means that any foreign key value must match an existing primary key value in another table. For example, if a student record references a course, that course must exist in the course table.
 
-#### **3.B) Distinguish between cardinality and degree of a relation with an example: (4 MARKS)**
+### **3.B) Distinguish between cardinality and degree of a relation with an example: (4 MARKS)**
 
 **Answer:**
 
@@ -107,7 +111,7 @@ Example: In the `student` table, if there are 50 rows of student records, the ca
 
 Example: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
 
-#### **3.C)** The Selangor Stage Coach Co. provides services to the greater Selangor municipal area, including various towns around the state capital.
+### **3.C)** The Selangor Stage Coach Co. provides services to the greater Selangor municipal area, including various towns around the state capital.
 
 The company owns a substantial number of buses. Each bus is allocated to a specific route, although some routes may have several buses. Each bus has a unique bus number. It is important to store information about the seating capacity and the make/type of each bus.
 
@@ -135,7 +139,7 @@ Read the above description carefully. State appropriate assumptions and devise t
 
 **Answer:** (padhako xaina 💀💀)
 
-#### **4.B) Discuss the purpose of the following database normalization levels:**
+### **4.B) Discuss the purpose of the following database normalization levels:**
 
 **Answer:**
 
@@ -157,7 +161,7 @@ It eliminate transitive dependencies. A table is in 3NF if it is in 2NF and all 
 
 Example: If a table has `Student_ID` as the primary key and includes `Advisor_Name`, where `Advisor_Name` depends on `Advisor_ID` (a non-key attribute), then `Advisor_ID` should be moved to a separate table.
 
-#### **4.C) Normalize Table 1 to 3NF**
+### **4.C) Normalize Table 1 to 3NF**
 
 **Answer:**
 
@@ -247,7 +251,7 @@ To achieve 3NF, remove transitive dependencies:
 
 ## Question 5
 
-#### **5.A) Define the function of each clause listed below:**
+### **5.A) Define the function of each clause listed below:**
 
 **I. SELECT**
 
@@ -255,15 +259,11 @@ Retrieves data from a database table. It tells the database which columns you wa
 
 **Example**: `SELECT Name, Age` gets the `Name` and `Age` columns from the table.
 
-***
-
 **II. FROM**
 
 Specifies the table from which to get the data. It tells the database where to look for the information.
 
 **Example**: `FROM Employees` means you’re getting data from the `Employees` table.
-
-***
 
 **III. WHERE**
 
@@ -271,15 +271,11 @@ Filters the data based on a condition. It shows only the rows that meet the crit
 
 **Example**: `WHERE Salary > 50000` shows rows where the `Salary` is more than 50,000.
 
-***
-
 **IV. NATURAL JOIN** (padhako xaina)
 
 Combines rows from two tables based on columns with the same name. It joins the tables automatically using these common columns.
 
 **Example**: `NATURAL JOIN Departments` joins the `Employees` table with the `Departments` table using shared column names.
-
-***
 
 **V. USING** (padhako xaina)
 
@@ -287,9 +283,7 @@ Specifies which column to use for joining two tables. It matches rows based on t
 
 **Example**: `USING (Dept_ID)` joins tables using the `Dept_ID` column, matching rows with the same `Dept_ID` from both tables.
 
-####
-
-#### **5.B) Write the SQL statements for the table illustrated below regarding the adult literacy program:**
+### **5.B) Write the SQL statements for the table illustrated below regarding the adult literacy program:**
 
 #### **Table 2.1 - INSTRUCTOR**
 
@@ -326,7 +320,7 @@ Specifies which column to use for joining two tables. It matches rows based on t
 | 6       | NU1564   | 3005      | 06/01/2016 | 28/06/2016 |
 | 7       | NU1178   | 3006      | 06/01/2016 |            |
 
-#### **5.B.i. Count the Number of Instructors with Status 'Temp Stop'. Rename the title as 'NUMTSTOP'**
+### **I.) Count the Number of Instructors with Status 'Temp Stop'. Rename the title as 'NUMTSTOP'**
 
 **Answer:**
 
@@ -345,7 +339,7 @@ WHERE Status = 'Temp Stop';
 
 <figure><img src=".gitbook/assets/5.B.i.png" alt=""><figcaption></figcaption></figure>
 
-#### **5.B.ii. List Out the Instructors Who Are "Active".**
+### **II.) List Out the Instructors Who Are "Active".**
 
 **Answer:**
 
@@ -363,7 +357,7 @@ WHERE Status = 'Active';
 
 <figure><img src=".gitbook/assets/5.B.ii.png" alt=""><figcaption></figcaption></figure>
 
-#### **5.B.iii. List the `StudentID` and Student's Read Score in Descending Order**
+### **III.) List the `StudentID` and Student's Read Score in Descending Order**
 
 **Answer:**
 
@@ -381,7 +375,7 @@ ORDER BY `Read` DESC;
 
 <figure><img src=".gitbook/assets/5.B.iii.png" alt=""><figcaption></figcaption></figure>
 
-#### **5.B.iv. Count the Number of Students Who Were Taking the Adult Literacy Program in the First Five Months of the Year**
+### **IV.) Count the Number of Students Who Were Taking the Adult Literacy Program in the First Five Months of the Year**
 
 **Answer:**
 
