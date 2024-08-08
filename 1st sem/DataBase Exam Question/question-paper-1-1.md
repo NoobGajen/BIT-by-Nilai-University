@@ -1,2 +1,0 @@
-# Question Paper - 1
-
