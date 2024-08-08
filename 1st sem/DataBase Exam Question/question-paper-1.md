@@ -2,7 +2,7 @@
 
 ## Question 1
 
-**1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
+#### **1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
 
 1. **Data Breaches:** Unauthorized access to sensitive data, leading to information theft or leaks.
 2. **SQL Injection:** Attackers manipulate SQL queries to gain unauthorized access or make unauthorized changes to the database.
@@ -10,7 +10,7 @@
 4. **Weak Access Controls:** Poor management of user permissions can lead to unauthorized users accessing or modifying sensitive data.
 5. **Ransomware Attacks:** Malicious software that locks the database, with attackers demand for a ransom to unlock or restore access to the data.
 
-**1.B)** Explain THREE (3) advantages of a Database Management System (DBMS). (6 MARKS)
+#### **1.B)** Explain THREE (3) advantages of a Database Management System (DBMS). (6 MARKS)
 
 1. **Data Consistency:** Ensures that data remains consistent across different applications, reducing errors or unusual problems.
 2. **Data Security:** Implements security measures like encryption and access controls to protect data from unauthorized access.
@@ -18,7 +18,7 @@
 4. **Efficient Data Management:** Improves data storage and retrieval processes, making it easier to manage large amounts of data.
 5. **Backup and Recovery:** Provides automatic backup and recovery mechanisms, ensuring data is safe and can be restored in case of failures.
 
-**1.C)** Describe THREE (3) functions of a data administrator. (6 MARKS)
+#### **1.C)** Describe THREE (3) functions of a data administrator. (6 MARKS)
 
 1. **Database Design:** Planning the structure of the database, including tables, relationships, and data types to meet user requirements.
 2. **Backup and Recovery:** Regularly backing up the database and implementing recovery plans to restore data in case of corruption or failures.
@@ -30,8 +30,7 @@
 
 ## Question 2
 
-**2.A) Describe the activities performed during the following phases of the database design and development process:**\
-i. **Requirement Analysis:**
+#### **2.A) Describe the activities performed during the following phases of the database design and development process:** i. **Requirement Analysis:**
 
 * Understanding user needs and identifying the data requirements for the database.
 * Gathering details on data types, volumes, and the relationships between different data entities.
@@ -47,8 +46,7 @@ ii. **Conceptual Database Design:**
 * Ensuring that the design supports all user requirements identified in the analysis phase.
 * Reviewing and refining the conceptual model with stakeholders to ensure it meets all needs.
 
-**2.b) Draw an example for the following attributes:**\
-i. **Derived attribute:**
+#### **2.b) Draw an example for the following attributes:** i. **Derived attribute:**
 
 * An attribute calculated from other attributes.\
   \- Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the Date of Birth is 2000, then Age is 24.
@@ -63,7 +61,7 @@ iii. **Composite attribute:**
 * An attribute that can be divided into smaller sub-parts.
   * Example: `Full Name` can be divided into `First Name` and `Last Name`.
 
-**2.C) Describe the following relationships:**
+#### **2.C) Describe the following relationships:**
 
 \
 i. **Person → Married to → Person:**
@@ -81,3 +79,25 @@ iii. **Doctor → Prescribes → Medicine:**
 &#x20;                           **Patient**
 
 * **Many-to-Many Relationship:** A doctor prescribes medicines to patients. Each prescription involves a doctor, a patient, and the medicine being prescribed. This can be seen as a relationship where one doctor can prescribe many medicines to many patients, and each patient can receive multiple prescriptions. This relationship is managed using an intermediate table that links doctors, patients, and medicines.
+
+## Question 3
+
+#### **3.A) Explain the following terms:**
+
+**1. Primary Key**\
+A primary key is a unique identifier for a record in a database table. It makes sure that every record is unique and can be easily found. Think of it like a unique ID card number for each person in a class.
+
+**2. Foreign Key**\
+A foreign key is a field in one table that links to the primary key in another table. It helps to establish relationships between tables. It’s sometimes called a **referencing key**. Imagine it as a reference number that connects related records in different tables.
+
+**3. Entity Integrity**\
+Entity integrity means that every table must have a primary key, and this key must uniquely identify each record. This ensures no record is missing a unique identifier. It’s like making sure every student in a class has a unique student ID.
+
+**4. Referential Integrity**\
+Referential integrity ensures that relationships between tables remain consistent. It means that any foreign key value must match an existing primary key value in another table. For example, if a student record references a course, that course must exist in the course table.
+
+#### **3.B) Distinguish between cardinality and degree of a relation with an example:**
+
+**Cardinality**: Cardinality refers to the number of tuples (rows) in a relation (table). **Example**: In the `student` table, if there are 50 rows of student records, the cardinality of the `student` relation is 50.
+
+**Degree**: Degree refers to the number of attributes (columns) in a relation (table). **Example**: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
