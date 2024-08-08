@@ -337,7 +337,7 @@ WHERE Status = 'Temp Stop';
 
 **Note:** You Don't need to write these explanation in exam 😊
 
-<figure><img src=".gitbook/assets/5.B.i.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Question Paper 1 5.B.i.png" alt=""><figcaption></figcaption></figure>
 
 ### **II.) List Out the Instructors Who Are "Active".**
 
@@ -355,7 +355,7 @@ WHERE Status = 'Active';
 
 **Note:** You Don't need to write these explanation in exam 😊
 
-<figure><img src=".gitbook/assets/5.B.ii.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Question Paper 1 5.B.ii.png" alt=""><figcaption></figcaption></figure>
 
 ### **III.) List the `StudentID` and Student's Read Score in Descending Order**
 
@@ -373,7 +373,7 @@ ORDER BY `Read` DESC;
 
 **Note:** You Don't need to write these explanation in exam 😊
 
-<figure><img src=".gitbook/assets/5.B.iii.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Question Paper 1 5.B.iii.png" alt=""><figcaption></figcaption></figure>
 
 ### **IV.) Count the Number of Students Who Were Taking the Adult Literacy Program in the First Five Months of the Year**
 
@@ -392,4 +392,4 @@ WHERE MONTH(StartDate) BETWEEN 1 AND 5;
 
 **Note:** You Don't need to write these explanation in exam 😊
 
-<figure><img src=".gitbook/assets/5.B.iv.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Question Paper 1 5.B.iv.png" alt=""><figcaption></figcaption></figure>

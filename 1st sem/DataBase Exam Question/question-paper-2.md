@@ -62,7 +62,7 @@ The `NATURAL JOIN` clause automatically joins two tables based on columns with t
 
 ### 5.B.) Write SQL Statement for the following queries referring to table 2:
 
-&#x20;                                                                   **Table no. 2:** Customer
+&#x20;                                                         **Table no. 2:** Customer
 
 | CustomerID | CustomerName                       | ContactName        | Address                       | City        | PostalCode | Country |
 | ---------- | ---------------------------------- | ------------------ | ----------------------------- | ----------- | ---------- | ------- |
@@ -71,3 +71,61 @@ The `NATURAL JOIN` clause automatically joins two tables based on columns with t
 | 3          | Antonio Moreno Taqueria            | Antonio Moreno     | Mataderos 2312                | Mexico City | 05023      | Mexico  |
 | 4          | Around the Horn                    | Thomas Hardy       | 120 Hanover Sq.               | London      | WA1 1DP    | UK      |
 | 5          | Berglunds snabbkop                 | Christina Berglund | Berguvsvägen 8                | Luleå       | S-958 22   | Sweden  |
+
+### **i. Select all customers with a `CustomerName` that has "r" in the second position.**
+
+```sql
+SELECT * 
+FROM Customer 
+WHERE CustomerName LIKE '_r%';
+```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.i.png" alt=""><figcaption></figcaption></figure>
+
+### **ii. Select all customers from the `Customer` table, sorted ascending by the `Country` and descending by the `CustomerName` column.**
+
+```sql
+SELECT * 
+FROM Customer 
+ORDER BY Country ASC, CustomerName DESC;
+```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.ii.png" alt=""><figcaption></figcaption></figure>
+
+### **iii. Insert a new record in the `Customer` table.**
+
+```sql
+INSERT INTO Customer (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country) 
+VALUES (6, 'Diwash Bist', 'BistDiwash', 'Naxal', 'Pokhara', '12345', 'Nepal');
+```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.iii.png" alt=""><figcaption></figcaption></figure>
+
+### **iv. List the number of customers in each country.**
+
+```sql
+SELECT Country, COUNT(*) AS NumberOfCustomer 
+FROM Customer 
+GROUP BY Country;
+```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.iv.png" alt=""><figcaption></figcaption></figure>
+
+### **v. Update the first customer (`CustomerID = 1`) with a new contact person and a new city.**
+
+```sql
+UPDATE Customer 
+SET ContactName = 'Gajendra Mahato', City = 'Kathmandu' 
+WHERE CustomerID = 1;
+```
+
+<figure><img src=".gitbook/assets/Question Paper 2 5.B.v.png" alt=""><figcaption></figcaption></figure>
+
+### **vi. List the number of customers in each country. Only include countries with more than 5 customers.**
+
+```sql
+SELECT Country, COUNT(*) AS NumberOfCustomers 
+FROM Customer 
+GROUP BY Country 
+HAVING NumberOfCustomers > 5;
+```
