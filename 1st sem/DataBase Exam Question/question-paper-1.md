@@ -30,7 +30,7 @@
 
 ## Question 2
 
-#### **2.A) Describe the activities performed during the following phases of the database design and development process:** i. **Requirement Analysis:**
+#### **2.A) Describe the activities performed during the following phases of the database design and development process: (8 MARKS)** i. **Requirement Analysis:**
 
 * Understanding user needs and identifying the data requirements for the database.
 * Gathering details on data types, volumes, and the relationships between different data entities.
@@ -46,7 +46,7 @@ ii. **Conceptual Database Design:**
 * Ensuring that the design supports all user requirements identified in the analysis phase.
 * Reviewing and refining the conceptual model with stakeholders to ensure it meets all needs.
 
-#### **2.b) Draw an example for the following attributes:** i. **Derived attribute:**
+#### **2.b) Draw an example for the following attributes: (6 MARKS)** i. **Derived attribute:**
 
 * An attribute calculated from other attributes.\
   \- Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the Date of Birth is 2000, then Age is 24.
@@ -61,7 +61,7 @@ iii. **Composite attribute:**
 * An attribute that can be divided into smaller sub-parts.
   * Example: `Full Name` can be divided into `First Name` and `Last Name`.
 
-#### **2.C) Describe the following relationships:**
+#### **2.C) Describe the following relationships: (6 MARKS)**
 
 \
 i. **Person → Married to → Person:**
@@ -82,7 +82,7 @@ iii. **Doctor → Prescribes → Medicine:**
 
 ## Question 3
 
-#### **3.A) Explain the following terms:**
+#### **3.A) Explain the following terms: (4 MARKS)**
 
 **1. Primary Key**\
 A primary key is a unique identifier for a record in a database table. It makes sure that every record is unique and can be easily found. Think of it like a unique ID card number for each person in a class.
@@ -96,12 +96,9 @@ Entity integrity means that every table must have a primary key, and this key mu
 **4. Referential Integrity**\
 Referential integrity ensures that relationships between tables remain consistent. It means that any foreign key value must match an existing primary key value in another table. For example, if a student record references a course, that course must exist in the course table.
 
-#### **3.B) Distinguish between cardinality and degree of a relation with an example:**
+#### **3.B) Distinguish between cardinality and degree of a relation with an example: (4 MARKS)**
 
-**Cardinality**:&#x20;
+**Cardinality:** Cardinality refers to the number of tuples (rows) in a relation (table). Example: In the `student` table, if there are 50 rows of student records, the cardinality of the `student` relation is 50.
 
-Cardinality refers to the number of tuples (rows) in a relation (table). **Example**: In the `student` table, if there are 50 rows of student records, the cardinality of the `student` relation is 50.
+**Degree:** Degree refers to the number of attributes (columns) in a relation (table). Example: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
 
-**Degree:**
-
-Degree refers to the number of attributes (columns) in a relation (table). **Example**: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
