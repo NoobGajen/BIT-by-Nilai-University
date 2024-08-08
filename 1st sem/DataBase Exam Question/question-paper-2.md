@@ -36,4 +36,27 @@ Some functions of a Database Administrator are:
 * **Security Management:** Controlling access to the database and protecting data from unauthorized access.
 * **Troubleshooting:** Diagnosing and resolving database-related issues.
 
-## Question 2
+## Question 5
+
+### 5.A.) Define the function of each clauses listed below: (5 MARKS)
+
+#### **i. WHERE**
+
+The `WHERE` clause is used to filter rows in a database query based on a specific condition. It only shows the rows that meet the given criteria. **Example:** `SELECT * FROM Employees WHERE Age > 30;` retrieves all employees older than 30.
+
+#### **ii. GROUP BY**
+
+The `GROUP BY` clause groups rows that have the same values in specified columns into summary rows, like totals or counts. It's often used with aggregate functions like `COUNT`, `SUM`, `AVG`, etc. **Example:** `SELECT Department, COUNT(*) FROM Employees GROUP BY Department;` counts the number of employees in each department.
+
+#### **iii. HAVING**
+
+The `HAVING` clause is used to filter the results of aggregated data that is grouped by the `GROUP BY` clause. It sets conditions on the grouped rows, similar to how `WHERE` sets conditions on individual rows. **Example:** `SELECT Department, COUNT(*) as count FROM Employees GROUP BY Department HAVING count > 10;` shows departments with more than 10 employees.
+
+#### **iv. FULL OUTER JOIN** (padhako xaina)&#x20;
+
+The `FULL OUTER JOIN` clause returns all records when there is a match in either the left or right table. If there is no match, it returns `NULL` for the missing data. It combines the results of both `LEFT JOIN` and `RIGHT JOIN`. **Example:** `SELECT * FROM Employees FULL OUTER JOIN Departments ON Employees.Department_ID = Departments.Department_ID;` returns all employees and all departments, including those with no matching records.
+
+#### **v. NATURAL JOIN** (padhako xaina)&#x20;
+
+The `NATURAL JOIN` clause automatically joins two tables based on columns with the same name in both tables. It simplifies the join process by using these common columns as the join condition. **Example:** `SELECT * FROM Employees NATURAL JOIN Departments;` joins the `Employees` and `Departments` tables using columns that have the same name in both tables, like `Department_ID`.
+
