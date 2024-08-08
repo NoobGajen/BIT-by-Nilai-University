@@ -1,5 +1,7 @@
 # Question Paper - 1
 
+## Question 1
+
 **1.A)** Discuss any THREE (3) current issues on security in managing databases. (6 MARKS)
 
 1. **Data Breaches:** Unauthorized access to sensitive data, leading to information theft or leaks.
@@ -23,3 +25,59 @@
 3. **User Access Control:** Managing user permissions and roles to ensure that only authorized users can access or modify certain data.
 4. **Data Integrity Management:** Ensuring that the data stored in the database is accurate, consistent, and free from errors.
 5. **Performance Monitoring:** Continuously monitoring the database's performance and optimizing queries to ensure it runs efficiently.
+
+***
+
+## Question 2
+
+**2.A) Describe the activities performed during the following phases of the database design and development process:**\
+i. **Requirement Analysis:**
+
+* Understanding user needs and identifying the data requirements for the database.
+* Gathering details on data types, volumes, and the relationships between different data entities.
+* Identifying any special requirements, such as security or performance needs.
+* Analyzing how data will be accessed and used by different users or applications.
+* Creating a detailed document that outlines the database's objectives and requirements.
+
+ii. **Conceptual Database Design:**
+
+* Creating a high-level model of the database, focusing on what data will be stored rather than how it will be stored.
+* Defining entities (like customers, products) and their relationships (like a customer places an order).
+* Using Entity-Relationship Diagrams (ERDs) to visually represent the database structure.
+* Ensuring that the design supports all user requirements identified in the analysis phase.
+* Reviewing and refining the conceptual model with stakeholders to ensure it meets all needs.
+
+**2.b) Draw an example for the following attributes:**\
+i. **Derived attribute:**
+
+* An attribute calculated from other attributes.\
+  \- Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the Date of Birth is 2000, then Age is 24.
+
+ii. **Multivalued attribute:**
+
+* An attribute that can have multiple values.
+  * Example: A `Person` can have multiple `Phone Numbers` such as Home, Work, and Mobile.
+
+iii. **Composite attribute:**
+
+* An attribute that can be divided into smaller sub-parts.
+  * Example: `Full Name` can be divided into `First Name` and `Last Name`.
+
+**2.C) Describe the following relationships:**
+
+\
+i. **Person → Married to → Person:**
+
+* **One-to-One Relationship:** Each person is married to one other person, representing a one-to-one relationship.
+
+ii. **Student → Relationship → Course:**
+
+* **Many-to-Many Relationship:** A student can enroll in many courses, and a course can have many students. This is typically represented using an intermediate table like "Enrollment."
+
+iii. **Doctor → Prescribes → Medicine:**
+
+&#x20;                                 **↓**
+
+&#x20;                           **Patient**
+
+* **Many-to-Many Relationship:** A doctor can prescribe many medicines to different patients, and each medicine can be prescribed by multiple doctors.
