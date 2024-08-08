@@ -98,6 +98,10 @@ Referential integrity ensures that relationships between tables remain consisten
 
 #### **3.B) Distinguish between cardinality and degree of a relation with an example:**
 
-**Cardinality**: Cardinality refers to the number of tuples (rows) in a relation (table). **Example**: In the `student` table, if there are 50 rows of student records, the cardinality of the `student` relation is 50.
+**Cardinality**:&#x20;
 
-**Degree**: Degree refers to the number of attributes (columns) in a relation (table). **Example**: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
+Cardinality refers to the number of tuples (rows) in a relation (table). **Example**: In the `student` table, if there are 50 rows of student records, the cardinality of the `student` relation is 50.
+
+**Degree:**
+
+Degree refers to the number of attributes (columns) in a relation (table). **Example**: In the `student` table, there are 6 columns: `SN`, `Name`, `Faculty`, `Address`, `Phone_number`, and `Reg_Date`. Therefore, the degree of the `student` relation is 6.
