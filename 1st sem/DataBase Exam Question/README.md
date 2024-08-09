@@ -253,6 +253,8 @@ To achieve 3NF, remove transitive dependencies:
 
 ### **5.A) Define the function of each clause listed below:**
 
+**Answer:**
+
 **I. SELECT**
 
 Retrieves data from a database table. It tells the database which columns you want to see.
