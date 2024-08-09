@@ -58,13 +58,13 @@ The `HAVING` clause is used to filter the results of aggregated data that is gro
 
 Example: `SELECT Department, COUNT(*) as count FROM Employees GROUP BY Department HAVING count > 10;` shows departments with more than 10 employees.
 
-#### **iv. FULL OUTER JOIN** (padhako xaina)&#x20;
+#### **iv. FULL OUTER JOIN**  (padhako xaina 💀💀)
 
 The `FULL OUTER JOIN` clause returns all records when there is a match in either the left or right table. If there is no match, it returns `NULL` for the missing data. It combines the results of both `LEFT JOIN` and `RIGHT JOIN`.&#x20;
 
 Example: `SELECT * FROM Employees FULL OUTER JOIN Departments ON Employees.Department_ID = Departments.Department_ID;` returns all employees and all departments, including those with no matching records.
 
-#### **v. NATURAL JOIN** (padhako xaina)&#x20;
+#### **v. NATURAL JOIN**  (padhako xaina 💀💀)&#x20;
 
 The `NATURAL JOIN` clause automatically joins two tables based on columns with the same name in both tables. It simplifies the join process by using these common columns as the join condition.&#x20;
 
