@@ -65,21 +65,9 @@ iii. **Composite attribute:**
 * An attribute that can be divided into smaller sub-parts.
   * Example: `Full Name` can be divided into `First Name` and `Last Name`.
 
-### **2.C) Describe the following relationships: (6 MARKS)** i. **Person → Married to → Person:**
+### **2.C) Describe the following relationships: (6 MARKS)**&#x20;
 
-**One-to-One Relationship:** Each person is married to one other person, representing a one-to-one relationship.
-
-ii. **Student → Relationship → Course:**
-
-**Many-to-Many Relationship:** A student can enroll in many courses, and a course can have many students. This is typically represented using an intermediate table like "Enrollment."
-
-iii. **Doctor → Prescribes → Medicine:**
-
-&#x20;                                 **↓**
-
-&#x20;                           **Patient**
-
-**Many-to-Many Relationship:** A doctor prescribes medicines to patients. Each prescription involves a doctor, a patient, and the medicine being prescribed. This can be seen as a relationship where one doctor can prescribe many medicines to many patients, and each patient can receive multiple prescriptions. This relationship is managed using an intermediate table that links doctors, patients, and medicines.
+**Answer:** (padhako xaina 💀💀)
 
 ## Question 3
 
@@ -141,7 +129,7 @@ Read the above description carefully. State appropriate assumptions and devise t
 
 ### **4.B) Discuss the purpose of the following database normalization levels:**
 
-**Answer:**
+**Answer:** (padhako xaina 💀💀)&#x20;
 
 **1. 1st Normal Form (1NF)**
 
@@ -163,7 +151,7 @@ Example: If a table has `Student_ID` as the primary key and includes `Advisor_Na
 
 ### **4.C) Normalize Table 1 to 3NF**
 
-**Answer:**
+**Answer:** (padhako xaina 💀💀)
 
 **Original Table:**
 
@@ -253,35 +241,37 @@ To achieve 3NF, remove transitive dependencies:
 
 ### **5.A) Define the function of each clause listed below:**
 
+**Answer:**
+
 **I. SELECT**
 
 Retrieves data from a database table. It tells the database which columns you want to see.
 
-**Example**: `SELECT Name, Age` gets the `Name` and `Age` columns from the table.
+Example: `SELECT Name, Age` gets the `Name` and `Age` columns from the table.
 
 **II. FROM**
 
 Specifies the table from which to get the data. It tells the database where to look for the information.
 
-**Example**: `FROM Employees` means you’re getting data from the `Employees` table.
+Example: `FROM Employees` means you’re getting data from the `Employees` table.
 
 **III. WHERE**
 
 Filters the data based on a condition. It shows only the rows that meet the criteria.
 
-**Example**: `WHERE Salary > 50000` shows rows where the `Salary` is more than 50,000.
+Example: `WHERE Salary > 50000` shows rows where the `Salary` is more than 50,000.
 
-**IV. NATURAL JOIN** (padhako xaina)
+**IV. NATURAL JOIN**  (padhako xaina 💀💀)
 
 Combines rows from two tables based on columns with the same name. It joins the tables automatically using these common columns.
 
-**Example**: `NATURAL JOIN Departments` joins the `Employees` table with the `Departments` table using shared column names.
+Example: `NATURAL JOIN Departments` joins the `Employees` table with the `Departments` table using shared column names.
 
-**V. USING** (padhako xaina)
+**V. USING**  (padhako xaina 💀💀)
 
 Specifies which column to use for joining two tables. It matches rows based on the column you provide.
 
-**Example**: `USING (Dept_ID)` joins tables using the `Dept_ID` column, matching rows with the same `Dept_ID` from both tables.
+Example: `USING (Dept_ID)` joins tables using the `Dept_ID` column, matching rows with the same `Dept_ID` from both tables.
 
 ### **5.B) Write the SQL statements for the table illustrated below regarding the adult literacy program:**
 
