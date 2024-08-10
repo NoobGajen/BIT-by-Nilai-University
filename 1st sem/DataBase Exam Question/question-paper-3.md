@@ -179,6 +179,8 @@ FROM Students
 WHERE S_percentage = (SELECT MIN(S_percentage) FROM Students);
 ```
 
+<figure><img src=".gitbook/assets/Question Paper 3 5.C.png" alt=""><figcaption></figcaption></figure>
+
 #### **D. Find Students Who Are Studying in the English Department**
 
 ```sql
@@ -194,6 +196,8 @@ JOIN Departments ON Students.D_ID = Departments.D_ID
 WHERE Departments.D_name = 'english';
 ```
 
+<figure><img src=".gitbook/assets/Question Paper 3 5.D.png" alt=""><figcaption></figcaption></figure>
+
 #### **E. List Students Who Secured Between 60 and 100 Percentage**
 
 ```sql
@@ -202,6 +206,8 @@ SELECT S_name, S_percentage
 FROM Students
 WHERE S_percentage BETWEEN 60 AND 100;
 ```
+
+<figure><img src=".gitbook/assets/Question Paper 3 5.E.png" alt=""><figcaption></figcaption></figure>
 
 #### **F. List Number of Students Who Study in Each Department** (padhako xaina 💀💀)
 
@@ -213,6 +219,8 @@ JOIN Departments AS d ON s.D_ID = d.D_ID
 GROUP BY d.D_name;
 ```
 
+<figure><img src=".gitbook/assets/Question Paper 3 5.F.png" alt=""><figcaption></figcaption></figure>
+
 #### **G. List Student Details and Department Name**
 
 ```sql
@@ -221,3 +229,5 @@ SELECT Students.S_ID, Students.S_name, Students.S_percentage, Departments.D_name
 FROM Students
 LEFT JOIN Departments ON Students.D_ID = Departments.D_ID;
 ```
+
+<figure><img src=".gitbook/assets/Question Paper 3 5.G.png" alt=""><figcaption></figcaption></figure>
