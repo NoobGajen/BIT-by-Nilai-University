@@ -46,3 +46,24 @@
    * The individuals or groups who interact with the database through applications or interfaces to perform their job functions or access information.
    * They perform tasks such as data entry, data retrieval, updates, and providing feedback.
 
+### **4. Explain with Figures**
+
+i. **Simple Attribute:** An attribute that cannot be broken down into smaller parts.&#x20;
+
+Example: `Employee ID` is a simple attribute because it represents a unique identifier that stands on its own without being divided further.
+
+ii. **Multivalued Attribute:** An attribute that can have multiple values.&#x20;
+
+Example: A `Person` can have multiple `Phone Numbers` such as Home, Work, and Mobile.
+
+iii. **Composite Attribute:** An attribute that can be divided into smaller sub-parts.
+
+Example: `Full Name` can be divided into `First Name` and `Last Name`.
+
+iv. **Derived Attribute:** An attribute calculated from other attributes.&#x20;
+
+Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the Date of Birth is 2000, then Age is 24.
+
+
+
+s
