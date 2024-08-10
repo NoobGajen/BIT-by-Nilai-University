@@ -66,4 +66,158 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 
 
 
-s
+## Question 5
+
+***
+
+**Students**
+
+| S\_ID | S\_name | S\_percentage | D\_ID |
+| ----- | ------- | ------------- | ----- |
+| s1    | Rihana  | 70            | d1    |
+| s2    | Tom     | 30            | d1    |
+| s3    | Jack    | 40            | NULL  |
+| s4    | Donald  | 50            | d3    |
+| s5    | Shakira | 69            | d3    |
+
+***
+
+**Departments**
+
+| D\_ID | D\_name   |
+| ----- | --------- |
+| d1    | math      |
+| d2    | physics   |
+| d3    | english   |
+| d4    | computer  |
+| d5    | economics |
+
+***
+
+**Faculty**
+
+| F\_ID | F\_name | D\_ID |
+| ----- | ------- | ----- |
+| f1    | Tin     | d1    |
+| f2    | Jach    | d2    |
+| f3    | Den     | d3    |
+| f4    | Nik     | d4    |
+| f5    | Tommy   | NULL  |
+
+***
+
+**Answer:**
+
+#### **A. Create above Tables**
+
+```sql
+-- Creating Students table
+CREATE TABLE Students (
+    S_ID VARCHAR(3) PRIMARY KEY,    
+    S_name VARCHAR(255) NOT NULL,  
+    S_percentage INT,     
+    D_ID VARCHAR(3)                
+);
+
+-- Creating Departments table
+CREATE TABLE Departments (
+    D_ID VARCHAR(3) PRIMARY KEY,    
+    D_name VARCHAR(255) NOT NULL   
+);
+
+-- Creating Faculty table
+CREATE TABLE Faculty (
+    F_ID VARCHAR(3) PRIMARY KEY,   
+    F_name VARCHAR(255),           
+    D_ID VARCHAR(3)                
+);
+```
+
+#### **B. Insert Values into the Tables**
+
+```sql
+-- Insert values into Students table
+INSERT INTO Students (S_ID, S_name, S_percentage, D_ID) VALUES 
+('s1', 'Rihana', 70, 'd1'),
+('s2', 'Tom', 30, 'd1'),
+('s3', 'Jack', 40, NULL),
+('s4', 'Donald', 50, 'd3'),
+('s5', 'Shakira', 69, 'd3');
+
+-- Insert values into Departments table
+INSERT INTO Departments (D_ID, D_name) VALUES 
+('d1', 'math'),
+('d2', 'physics'),
+('d3', 'english'),
+('d4', 'computer'),
+('d5', 'economics');
+
+-- Insert values into Faculty table
+INSERT INTO Faculty (F_ID, F_name, D_ID) VALUES 
+('f1', 'Tin', 'd1'),
+('f2', 'Jack', 'd2'),
+('f3', 'Den', 'd3'),
+('f4', 'Nik', 'd4'),
+('f5', 'Tommy', NULL);
+```
+
+#### **C. List Student with Highest, Average and Minimum Percentage**
+
+```sql
+-- Listing students with the highest percentage
+SELECT S_name, S_percentage AS Highest_Percentage
+FROM Students
+WHERE S_percentage = (SELECT MAX(S_percentage) FROM Students);
+
+-- Listing students with the average percentage
+SELECT AVG(S_percentage) AS Average_Percentage
+FROM Students;
+
+-- Listing students with the minimum percentage
+SELECT S_name, S_percentage AS Minimum_Percentage
+FROM Students
+WHERE S_percentage = (SELECT MIN(S_percentage) FROM Students);
+```
+
+#### **D. Find Students Who Are Studying in the English Department**
+
+```sql
+-- Finding students in the English department by using subquery method.
+SELECT S_name, S_percentage
+FROM Students
+WHERE D_ID = (SELECT D_ID FROM Departments WHERE D_name = 'english');
+
+-- Finding students in the English department by using join method.  (padhako xaina 💀💀)
+SELECT S_name, S_percentage
+FROM Students
+JOIN Departments ON Students.D_ID = Departments.D_ID
+WHERE Departments.D_name = 'english';
+```
+
+#### **E. List Students Who Secured Between 60 and 100 Percentage**
+
+```sql
+-- List students with percentage between 60 and 100
+SELECT S_name, S_percentage
+FROM Students
+WHERE S_percentage BETWEEN 60 AND 100;
+```
+
+#### **F. List Number of Students Who Study in Each Department** (padhako xaina 💀💀)
+
+```sql
+-- Counting number of students in each department
+SELECT d.D_name AS Department_name, COUNT(*) AS Student_count
+FROM Students AS s
+JOIN Departments AS d ON s.D_ID = d.D_ID
+GROUP BY d.D_name;
+```
+
+#### **G. List Student Details and Department Name**
+
+```sql
+-- Finding student details and their department names using join method  (padhako xaina 💀💀)
+SELECT Students.S_ID, Students.S_name, Students.S_percentage, Departments.D_name
+FROM Students
+LEFT JOIN Departments ON Students.D_ID = Departments.D_ID;
+```
