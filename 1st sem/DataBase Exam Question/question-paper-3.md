@@ -108,7 +108,7 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 
 **Answer:**
 
-#### **A. Create above Tables**
+### **A. Create above Tables**
 
 ```sql
 -- Creating Students table
@@ -133,7 +133,7 @@ CREATE TABLE Faculty (
 );
 ```
 
-#### **B. Insert Values into the Tables**
+### **B. Insert Values into the Tables**
 
 ```sql
 -- Insert values into Students table
@@ -161,7 +161,7 @@ INSERT INTO Faculty (F_ID, F_name, D_ID) VALUES
 ('f5', 'Tommy', NULL);
 ```
 
-#### **C. List Student with Highest, Average and Minimum Percentage**
+### **C. List Student with Highest, Average and Minimum Percentage**
 
 ```sql
 -- Listing students with the highest percentage
@@ -181,7 +181,7 @@ WHERE S_percentage = (SELECT MIN(S_percentage) FROM Students);
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.C.png" alt=""><figcaption></figcaption></figure>
 
-#### **D. Find Students Who Are Studying in the English Department**
+### **D. Find Students Who Are Studying in the English Department**
 
 ```sql
 -- Finding students in the English department by using subquery method.
@@ -198,7 +198,7 @@ WHERE Departments.D_name = 'english';
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.D.png" alt=""><figcaption></figcaption></figure>
 
-#### **E. List Students Who Secured Between 60 and 100 Percentage**
+### **E. List Students Who Secured Between 60 and 100 Percentage**
 
 ```sql
 -- List students with percentage between 60 and 100
@@ -209,7 +209,7 @@ WHERE S_percentage BETWEEN 60 AND 100;
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.E.png" alt=""><figcaption></figcaption></figure>
 
-#### **F. List Number of Students Who Study in Each Department** (padhako xaina 💀💀)
+### **F. List Number of Students Who Study in Each Department** (padhako xaina 💀💀)
 
 ```sql
 -- Counting number of students in each department
@@ -221,7 +221,7 @@ GROUP BY d.D_name;
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.F.png" alt=""><figcaption></figcaption></figure>
 
-#### **G. List Student Details and Department Name**
+### **G. List Student Details and Department Name**
 
 ```sql
 -- Finding student details and their department names using join method  (padhako xaina 💀💀)
