@@ -82,6 +82,8 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 
 ***
 
+
+
 **Departments**
 
 | D\_ID | D\_name   |
@@ -94,6 +96,8 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 
 ***
 
+
+
 **Faculty**
 
 | F\_ID | F\_name | D\_ID |
@@ -103,8 +107,6 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 | f3    | Den     | d3    |
 | f4    | Nik     | d4    |
 | f5    | Tommy   | NULL  |
-
-***
 
 **Answer:**
 
