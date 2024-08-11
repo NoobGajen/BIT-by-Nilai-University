@@ -10,7 +10,7 @@
 | **Data Integrity**  | Limited, as maintaining consistent data across multiple files can be challenging. | High, as DBMS enforces rules to ensure data consistency.                                 |
 | **Security**        | Basic, as security mechanisms are usually application-specific.                   | Strong, with built-in mechanisms for access control and data protection.                 |
 
-### **2. Explain Database Approaches**
+### **2. Explain Database Approaches.**   (padhako xaina 💀💀)
 
 1. **Centralized Approach:**
    * All data is kept in one central place, usually on a single database server.
@@ -25,28 +25,28 @@
    * Data is stored on cloud servers and accessed online.
    * It offers flexibility, easy scaling, and lower costs for physical infrastructure, but it depends on having a good internet connection.
 
-### **3. Explain Different Roles in DBMS**
+### **3. Explain Different Roles in DBMS.**
 
-1. **Data Administrator (DA):**
+1. **Data Administrator (DA).**
    * The person who is responsible for the overall management and strategic use of data of an organization, ensuring its quality, consistency, and accessibility across the entire organization.
    * They are also responsible for developing data policies, data planning, data quality management, metadata management, and data security.
-2. **Database Administrator (DBA):**
+2. **Database Administrator (DBA).**
    * The person who is responsible for the technical management, maintenance, day-to-day operations, and security of an organization's database management system (DBMS).
    * They manage the overall database environment and are responsible for tasks such as backups and recovery, security, performance tuning, and ensuring the database runs smoothly.
-3. **Logical Database Designer:**
+3. **Logical Database Designer.**
    * The person who is responsible for designing the conceptual or logical representation of the database structure, focusing on the organization of data without considering physical implementation details like file storage, indexing, or performance optimization.
    * They handle data modeling, schema design, normalization, and user requirements analysis.
 4. **Physical Database Designer:**
    * The person who is responsible for implementing the logical database design into a physical structure, determining how data will be stored and accessed in the actual database management system (DBMS).
    * They are responsible for physical schema design, storage management, performance optimization, and implementation.
-5. **Application Developer:**
+5. **Application Developer.**
    * The person who is responsible for developing software applications that interact with the database, implementing business logic and user interfaces for data manipulation and retrieval.
    * They are also responsible for requirements analysis, database interaction, application design, testing and debugging, and integration.
-6. **End Users:**
+6. **End Users.**
    * The individuals or groups who interact with the database through applications or interfaces to perform their job functions or access information.
    * They perform tasks such as data entry, data retrieval, updates, and providing feedback.
 
-### **4. Explain with Figures**
+### **4. Explain with Figures.**
 
 i. **Simple Attribute:** An attribute that cannot be broken down into smaller parts.&#x20;
 
@@ -108,7 +108,7 @@ Example: `Age` derived from `Date of Birth`. If the current date is 2024 and the
 
 **Answer:**
 
-### **A. Create above Tables**
+### **A. Create above Tables.**
 
 ```sql
 -- Creating Students table
@@ -133,7 +133,7 @@ CREATE TABLE Faculty (
 );
 ```
 
-### **B. Insert Values into the Tables**
+### **B. Insert Values into the Tables.**
 
 ```sql
 -- Insert values into Students table
@@ -161,7 +161,7 @@ INSERT INTO Faculty (F_ID, F_name, D_ID) VALUES
 ('f5', 'Tommy', NULL);
 ```
 
-### **C. List Student with Highest, Average and Minimum Percentage**
+### **C. List Student with Highest, Average and Minimum Percentage.**
 
 ```sql
 -- Listing students with the highest percentage
@@ -181,7 +181,7 @@ WHERE S_percentage = (SELECT MIN(S_percentage) FROM Students);
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.C.png" alt=""><figcaption></figcaption></figure>
 
-### **D. Find Students Who Are Studying in the English Department**
+### **D. Find Students Who Are Studying in the English Department.**
 
 ```sql
 -- Finding students in the English department by using subquery method.
@@ -198,7 +198,7 @@ WHERE Departments.D_name = 'english';
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.D.png" alt=""><figcaption></figcaption></figure>
 
-### **E. List Students Who Secured Between 60 and 100 Percentage**
+### **E. List Students Who Secured Between 60 and 100 Percentage.**
 
 ```sql
 -- List students with percentage between 60 and 100
