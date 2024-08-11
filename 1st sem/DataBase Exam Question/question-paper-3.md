@@ -209,7 +209,7 @@ WHERE S_percentage BETWEEN 60 AND 100;
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.E.png" alt=""><figcaption></figcaption></figure>
 
-### **F. List Number of Students Who Study in Each Department** (padhako xaina 💀💀)
+### **F. List Number of Students Who Study in Each Department.** (padhako xaina 💀💀)
 
 ```sql
 -- Counting number of students in each department
@@ -221,7 +221,7 @@ GROUP BY d.D_name;
 
 <figure><img src=".gitbook/assets/Question Paper 3 5.F.png" alt=""><figcaption></figcaption></figure>
 
-### **G. List Student Details and Department Name**
+### **G. List Student Details and Department Name.**  (padhako xaina 💀💀)
 
 ```sql
 -- Finding student details and their department names using join method  (padhako xaina 💀💀)
