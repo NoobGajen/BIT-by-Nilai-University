@@ -6,7 +6,7 @@
 
 1. **Data Breaches:** Unauthorized access to sensitive data, leading to information theft or leaks.
 2. **SQL Injection:** Attackers manipulate SQL queries to gain unauthorized access or make unauthorized changes to the database.
-3. **Insider Threats:** Employees or users with legitimate access to the database may misuse their privileges, either intentionally or accidentally, causing harm.
+3. **Insider Threats:** Employees or users with legitimate access to the database may misuse their privileges, either intentionally or accidentally.
 4. **Weak Access Controls:** Poor management of user permissions can lead to unauthorized users accessing or modifying sensitive data.
 5. **Ransomware Attacks:** Malicious software that locks the database, with attackers demand for a ransom to unlock or restore access to the data.
 
