@@ -18,7 +18,7 @@
 4. **Efficient Data Management:** Improves data storage and retrieval processes, making it easier to manage large amounts of data.
 5. **Backup and Recovery:** Provides automatic backup and recovery mechanisms, ensuring data is safe and can be restored in case of failures.
 
-### **1.C)** Describe THREE (3) functions of a data administrator. (6 MARKS)
+### **1.C)** Describe FOUR (4) functions of a data administrator. (8 MARKS)
 
 1. **Database Design:** Planning the structure of the database, including tables, relationships, and data types to meet user requirements.
 2. **Backup and Recovery:** Regularly backing up the database and implementing recovery plans to restore data in case of corruption or failures.
