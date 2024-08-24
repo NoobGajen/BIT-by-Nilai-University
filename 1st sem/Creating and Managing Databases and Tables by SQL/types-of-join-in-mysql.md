@@ -30,7 +30,7 @@ A LEFT JOIN returns all records from the left table (`tableA`), and the matched 
 
 ```sql
 -- SYNTAX of Left Join
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a 
 LEFT JOIN tableB AS b 
 ON a.column_name = b.column_name;
@@ -44,7 +44,7 @@ A RIGHT JOIN returns all records from the right table (`tableB`), and the matche
 
 ```sql
 -- SYNTAX of Right Join
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a
 RIGHT JOIN tableB AS b 
 ON a.column_name = b.column_name;
@@ -60,18 +60,18 @@ A FULL OUTER JOIN returns all records when there is a match in either table (`ta
 
 ```sql
 -- SYNTAX of Full Outer Join (By combining Left and Right Join)
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a
 LEFT JOIN tableB AS b ON a.column_name = b.column_name;
 
 UNION
 
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a
 RIGHT JOIN tableB AS b ON a.column_name = b.column_name;
 
 -- OR, SYNTAX of Full Outer Join (Doesn't work in my DBMS)
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a
 FULL OUTER JOIN tableB AS b ON a.column_name = b.column_name;
 ```
@@ -86,7 +86,7 @@ For example, if we have a table of students where some students are also mentors
 
 ```sql
 -- SYNTAX of Self Join
-SELECT a.column1, a.column2, b.column3
+SELECT column(s) 
 FROM tableA AS a
 LEFT JOIN tableA AS b ON a.column_name = b.column_name;
 ```
