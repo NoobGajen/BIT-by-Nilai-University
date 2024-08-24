@@ -4,4 +4,4 @@
 * [ORDER BY Operations for Various Data in MySQL](order-by-operations-for-various-data-in-mysql.md)
 * [Formatting Dates in MySQL](formatting-dates-in-mysql.md)
 * [Aggregate Functions in MySQL](aggregate-functions-in-mysql.md)
-* [Join in MySQL](join-in-mysql.md)
+* [Types of Join in MySQL](types-of-join-in-mysql.md)
