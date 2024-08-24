@@ -15,9 +15,9 @@ An **inner join** retrieves only the rows with match data in both tables. It is 
 ```sql
 -- SYNTAX of Inner Join
 SELECT column(s) 
-FROM tableA AS a
-INNER JOIN tableB AS b ON
-a.column_name = b.column_name;
+FROM tableA AS a 
+INNER JOIN tableB AS b 
+ON a.column_name = b.column_name;
 ```
 
 <figure><img src=".gitbook/assets/INNER JOIN.png" alt=""><figcaption></figcaption></figure>
@@ -31,9 +31,9 @@ A LEFT JOIN returns all records from the left table (`tableA`), and the matched 
 ```sql
 -- SYNTAX of Left Join
 SELECT a.column1, a.column2, b.column3
-FROM tableA AS a
-LEFT JOIN tableB AS b ON
-a.column_name = b.column_name;
+FROM tableA AS a 
+LEFT JOIN tableB AS b 
+ON a.column_name = b.column_name;
 ```
 
 <figure><img src=".gitbook/assets/LEFT JOIN.png" alt=""><figcaption></figcaption></figure>
@@ -46,8 +46,8 @@ A RIGHT JOIN returns all records from the right table (`tableB`), and the matche
 -- SYNTAX of Right Join
 SELECT a.column1, a.column2, b.column3
 FROM tableA AS a
-RIGHT JOIN tableB AS b ON
-a.column_name = b.column_name;
+RIGHT JOIN tableB AS b 
+ON a.column_name = b.column_name;
 ```
 
 <figure><img src=".gitbook/assets/RIGHT JOIN.png" alt=""><figcaption></figcaption></figure>
@@ -62,22 +62,18 @@ A FULL OUTER JOIN returns all records when there is a match in either table (`ta
 -- SYNTAX of Full Outer Join (By combining Left and Right Join)
 SELECT a.column1, a.column2, b.column3
 FROM tableA AS a
-LEFT JOIN tableB AS b ON
-a.column_name = b.column_name;
+LEFT JOIN tableB AS b ON a.column_name = b.column_name;
 
 UNION
 
 SELECT a.column1, a.column2, b.column3
 FROM tableA AS a
-RIGHT JOIN tableB AS b ON
-a.column_name = b.column_name;
+RIGHT JOIN tableB AS b ON a.column_name = b.column_name;
 
 -- OR, SYNTAX of Full Outer Join (Doesn't work in my DBMS)
-
 SELECT a.column1, a.column2, b.column3
 FROM tableA AS a
-FULL OUTER JOIN tableB AS b ON
-a.column_name = b.column_name;
+FULL OUTER JOIN tableB AS b ON a.column_name = b.column_name;
 ```
 
 <figure><img src=".gitbook/assets/FULL OUTER JOIN.png" alt=""><figcaption></figcaption></figure>
@@ -92,6 +88,7 @@ a.column_name = b.column_name;
 -- SYNTAX of Self Join
 SELECT a.column1, a.column2, b.column3
 FROM tableA AS a
-LEFT JOIN tableA AS b
-ON a.column_name = b.column_name;
+LEFT JOIN tableA AS b ON a.column_name = b.column_name;
 ```
+
+<figure><img src=".gitbook/assets/SELF JOIN.png" alt=""><figcaption></figcaption></figure>
