@@ -4,16 +4,17 @@
 
 A join in SQL is a powerful operation used to combine rows from two or more tables based on a related column. By using joins, we can retrieve data spread across multiple tables in a relational database. Joins include:
 
-1. **Inner joins** (returning only matching rows)
+1. **Inner joins** (return only matching rows)
 2. **Outer joins** (left, right, and full join to include all rows from one or both tables, with NULLs where there is no match)
-3. **Self joins** (compare rows within the same table)
+3. **Self joins** (compare rows within the same table, with NULLs where there is no match)
 
 ## 1.) INNER JOIN
 
-An **inner join** retrieves only the rows with match data in both tables. It is commonly used to get records that exist in both tables based on a related column.
+An **inner join** retrieves only the rows which match data in both tables. It is commonly used to get records that exist in both tables based on a related column.
+
+**Syntax of Inner Join:**
 
 ```sql
--- SYNTAX of Inner Join
 SELECT column(s) 
 FROM tableA AS a 
 INNER JOIN tableB AS b 
@@ -28,8 +29,9 @@ ON a.column_name = b.column_name;
 
 A LEFT JOIN returns all records from the left table (`tableA`), and the matched records from the right table (`tableB`). If there is no match, the result will contain `NULL` for the columns from `tableB`.
 
+**Syntax of Left Join:**
+
 ```sql
--- SYNTAX of Left Join
 SELECT column(s) 
 FROM tableA AS a 
 LEFT JOIN tableB AS b 
@@ -42,8 +44,9 @@ ON a.column_name = b.column_name;
 
 A RIGHT JOIN returns all records from the right table (`tableB`), and the matched records from the left table (`tableA`). If there is no match, the result will contain `NULL` for the columns from `tableA`.
 
+**Syntax of Right Join:**
+
 ```sql
--- SYNTAX of Right Join
 SELECT column(s) 
 FROM tableA AS a
 RIGHT JOIN tableB AS b 
@@ -56,7 +59,7 @@ ON a.column_name = b.column_name;
 
 A FULL OUTER JOIN returns all records when there is a match in either table (`tableA` or `tableB`). Records that do not have a match will show `NULL` values for columns from the table without a match.
 
-**Syntax:**
+**Syntax of Full Outer Join:**
 
 ```sql
 -- SYNTAX of Full Outer Join (By combining Left and Right Join)
@@ -84,8 +87,9 @@ A self join lets us link rows in the same table to other rows in that same table
 
 For example, if we have a table of students where some students are also mentors, a self join can help us see which student is mentoring which other students. So, let's begin.
 
+**Syntax of Self Join:**
+
 ```sql
--- SYNTAX of Self Join
 SELECT column(s) 
 FROM tableA AS a
 LEFT JOIN tableA AS b ON a.column_name = b.column_name;
