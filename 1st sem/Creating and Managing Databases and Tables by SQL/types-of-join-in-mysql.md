@@ -80,9 +80,9 @@ FULL OUTER JOIN tableB AS b ON a.column_name = b.column_name;
 
 ## 3.) Self Join
 
+A self join lets us link rows in the same table to other rows in that same table. It's helpful when we need to find relationships within a single set of data.&#x20;
 
-
-
+For example, if we have a table of students where some students are also mentors, a self join can help us see which student is mentoring which other students. So, let's begin.
 
 ```sql
 -- SYNTAX of Self Join
@@ -92,3 +92,8 @@ LEFT JOIN tableA AS b ON a.column_name = b.column_name;
 ```
 
 <figure><img src=".gitbook/assets/SELF JOIN.png" alt=""><figcaption></figcaption></figure>
+
+* **student\_id**: A unique ID for each student.
+* **student\_name**: The name of the student.
+* **mentor\_id**: The ID of the student who is the mentor as well.
+
