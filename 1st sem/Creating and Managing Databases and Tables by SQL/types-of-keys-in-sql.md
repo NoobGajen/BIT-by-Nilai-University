@@ -226,30 +226,70 @@ CREATE TABLE Customers (
 
 ## **Key Comparisons**
 
-### **1. Surrogate Key vs. Natural Key**
+#### 1. **Primary Key vs. Unique Key**
 
-* **Surrogate Key**:
-  * An artificially created key with no business meaning.
-  * Typically an auto-incremented number.
-  * Does not change over time.
-  * Used when there is no suitable natural key or when a stable, unique identifier is needed.
-* **Natural Key**:
-  * Derived from real-world data attributes.
-  * Has business meaning and is often unique by nature.
-  * Can change over time if the underlying data changes.
-  * Used when an existing, meaningful unique identifier is present.
+**Primary Key:**
 
-**Example**: In a `Students` table, a `StudentID` could be a surrogate key (an auto-incremented number) or a natural key (a government-issued student number).
+* Ensures that each value is unique and non-null.
+* Only one primary key can be defined per table.
+* Used to uniquely identify each record in the table.
+* Typically chosen from the candidate keys.
 
-### **2. Composite Key vs. Simple Key**
+**Unique Key:**
 
-* **Composite Key**:
-  * Consists of two or more columns.
-  * Used when a single column is not sufficient to uniquely identify a record.
-  * More complex to manage, as it involves multiple attributes.
-* **Simple Key**:
-  * Consists of a single column.
-  * Used when one attribute can uniquely identify a record.
-  * Easier to manage and query.
+* Ensures that all values in the unique key column(s) are unique.
+* Can include NULL values (depending on SQL implementation).
+* A table can have multiple unique keys.
+* Used to enforce uniqueness in a column or set of columns but does not serve as the primary identifier.
 
-**Example**: In a `CourseRegistrations` table, a combination of `StudentID` and `CourseID` could be a composite key, while a single `CustomerID` in a `Customers` table could be a simple key.
+**Example:** In a `Customers` table, `CustomerID` might be the primary key, while `Email` could be a unique key ensuring no duplicate email addresses.
+
+#### 2. **Composite Key vs. Simple Key**
+
+**Composite Key:**
+
+* Consists of two or more columns.
+* Used when a single column is not sufficient to uniquely identify a record.
+* More complex to manage as it involves multiple attributes.
+
+**Simple Key:**
+
+* Consists of a single column.
+* Used when one attribute can uniquely identify a record.
+* Easier to manage and query.
+
+**Example:** In a `CourseRegistrations` table, a combination of `StudentID` and `CourseID` could be a composite key, while a single `CustomerID` in a `Customers` table could be a simple key.
+
+#### 3. **Super Key vs. Candidate Key**
+
+**Super Key:**
+
+* A set of one or more columns that can uniquely identify records.
+* Includes candidate keys as well as additional columns.
+* Can be more complex and include unnecessary attributes.
+
+**Candidate Key:**
+
+* A minimal super key, meaning it has no unnecessary columns.
+* Each candidate key can uniquely identify records in a table.
+* One candidate key is chosen as the primary key, and others are considered alternate keys.
+
+**Example:** In an `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` could be super keys. However, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each be candidate keys.
+
+#### 4. **Surrogate Key vs. Natural Key**
+
+**Surrogate Key:**
+
+* An artificially created key with no business meaning.
+* Typically an auto-incremented number.
+* Does not change over time.
+* Used when there is no suitable natural key or when a stable, unique identifier is needed.
+
+**Natural Key:**
+
+* Derived from real-world data attributes.
+* Has business meaning and is often unique by nature.
+* Can change over time if the underlying data changes.
+* Used when an existing, meaningful unique identifier is present.
+
+**Example:** In a `Students` table, `StudentID` could be a surrogate key (an auto-incremented number) or a natural key (a government-issued student number).
