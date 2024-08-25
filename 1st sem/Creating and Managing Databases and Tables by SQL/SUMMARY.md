@@ -5,4 +5,4 @@
 * [Formatting Dates in MySQL](formatting-dates-in-mysql.md)
 * [Aggregate Functions in MySQL](aggregate-functions-in-mysql.md)
 * [Types of Join in MySQL](types-of-join-in-mysql.md)
-* [Keys in SQL](keys-in-sql.md)
+* [Types of Keys in SQL](types-of-keys-in-sql.md)
