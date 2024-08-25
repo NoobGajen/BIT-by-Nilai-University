@@ -226,7 +226,7 @@ CREATE TABLE Customers (
 
 ## **Key Comparisons**
 
-#### 1. **Primary Key vs. Unique Key**
+### 1. **Primary Key vs. Unique Key**
 
 **Primary Key:**
 
@@ -244,7 +244,7 @@ CREATE TABLE Customers (
 
 **Example:** In a `Customers` table, `CustomerID` might be the primary key, while `Email` could be a unique key ensuring no duplicate email addresses.
 
-#### 2. **Composite Key vs. Simple Key**
+### 2. **Composite Key vs. Simple Key**
 
 **Composite Key:**
 
@@ -260,7 +260,7 @@ CREATE TABLE Customers (
 
 **Example:** In a `CourseRegistrations` table, a combination of `StudentID` and `CourseID` could be a composite key, while a single `CustomerID` in a `Customers` table could be a simple key.
 
-#### 3. **Super Key vs. Candidate Key**
+### 3. **Super Key vs. Candidate Key**
 
 **Super Key:**
 
@@ -276,7 +276,7 @@ CREATE TABLE Customers (
 
 **Example:** In an `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` could be super keys. However, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each be candidate keys.
 
-#### 4. **Surrogate Key vs. Natural Key**
+### 4. **Surrogate Key vs. Natural Key**
 
 **Surrogate Key:**
 
