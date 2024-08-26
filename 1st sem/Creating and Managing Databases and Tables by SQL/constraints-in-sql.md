@@ -17,7 +17,7 @@ Key Constraints are rules applied to columns in a database table to enforce the 
 
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
-### Type of Key Constraints
+### [Type of Key Constraints:](#user-content-fn-1)[^1]
 
 ### 1. **Primary Key**
 
@@ -376,3 +376,5 @@ CREATE TABLE Persons (
     Age INT CHECK (Age >= 18)               -- Check: Ensures age is at least 18
 );
 ```
+
+[^1]: 
