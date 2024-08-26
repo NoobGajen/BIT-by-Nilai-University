@@ -1,4 +1,15 @@
-# Types of Keys in SQL
+# Constraints in SQL
+
+Constraints are rules applied to columns in a table to ensure the accuracy, validity, and integrity of the data stored within a database. They enforce certain conditions on the data, preventing invalid entries and maintaining consistency across the database. By using constraints, we can define the specific properties of the data that can be stored, ensuring that the database operates reliably and according to the intended design.&#x20;
+
+Constraints can be broadly categorized into 2 types:&#x20;
+
+1. Key Constraints
+2. Domain Constraints
+
+
+
+## 1.) Key Constraints
 
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
