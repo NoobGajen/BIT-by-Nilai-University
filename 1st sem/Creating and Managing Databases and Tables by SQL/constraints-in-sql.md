@@ -15,9 +15,9 @@ Constraints can be broadly categorized into 2 types:&#x20;
 
 Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
 
-<figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
-
 ### [Type of Key Constraints:](#user-content-fn-1)[^1]
+
+<figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
 ### 1. **Primary Key**
 
@@ -377,4 +377,4 @@ CREATE TABLE Persons (
 );
 ```
 
-[^1]: 
+[^1]: Type of Key Constraints
