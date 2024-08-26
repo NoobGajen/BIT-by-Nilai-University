@@ -1,10 +1,16 @@
 # Operations or Commands in MySQL
 
-## Introduction to MySQL
+SQL commands are essential for interacting with a database. They allow users to perform various actions and manage data effectively. SQL commands are generally categorized into five main types:
+
+1. [**DDL (Data Definition Language)**](./#data-definition-language-ddl): Commands used to define and manage database structures, such as tables and indexes.
+2. **DQL (Data Query Language)**: Commands used to query and retrieve data from the database.
+3. [**DML (Data Manipulation Language)**](./#data-manipulation-language-dml): Commands used to insert, update, and delete data within the database.
+4. **DCL (Data Control Language)**: Commands used to control access to data and manage user permissions.
+5. **TCL (Transaction Control Language)**: Commands used to manage transactions, ensuring data integrity and consistency.
+
+### Introduction to MySQL
 
 MySQL is an open-source relational database management system (RDBMS) based on Structured Query Language (SQL). It is widely used for managing and organizing data due to its reliability, ease of use, and support for various programming languages. MySQL is commonly used in web applications and is an essential component of the LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack.
-
-## Types of Operations or Commands in MySQL:
 
 ## Data Definition Language (DDL)
 
