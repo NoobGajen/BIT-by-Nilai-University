@@ -4,10 +4,12 @@ Constraints are rules applied to columns in a table to ensure the accuracy, vali
 
 Constraints can be broadly categorized into 2 types:&#x20;
 
-1. Key Constraints
-2. Domain Constraints
+1.  Key Constraints
 
+    Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
+2.  Domain Constraints
 
+    Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
 
 ## 1.) Key Constraints
 
