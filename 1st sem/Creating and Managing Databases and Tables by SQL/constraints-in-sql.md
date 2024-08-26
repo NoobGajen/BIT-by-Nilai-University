@@ -11,7 +11,11 @@ Constraints can be broadly categorized into 2 types:&#x20;
 
 ## 1.) Key Constraints
 
+Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
+
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
+
+## Type of Key Constraints
 
 ### 1. **Primary Key**
 
@@ -306,6 +310,10 @@ CREATE TABLE Customers (
 **Example:** In a `Students` table, `StudentID` could be a surrogate key (an auto-incremented number) or a natural key (a government-issued student number).
 
 ## 2.) Domain Constraints
+
+Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
+
+## Type of Domain Constraints
 
 ### 1. **Not Null Constraint**
 
