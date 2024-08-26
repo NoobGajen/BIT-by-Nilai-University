@@ -83,31 +83,9 @@ CREATE TABLE Customers (
 );
 ```
 
-### 4. **Candidate Key**
 
-A candidate key is a column (or a set of columns) that can uniquely identify any database record without referring to any other data. A table can have multiple candidate keys, and one of these is selected as the primary key.
 
-**Characteristics:**
-
-* **Primary Key Selection**: One candidate key is chosen as the primary key. The primary key is the main key used to uniquely identify records in the table. Other candidate keys that are not selected as the primary key are known as alternate keys.
-* **Multiple Keys**: A table can have multiple candidate keys. Each candidate key is a potential choice for the primary key.
-* **Uniqueness**: Each candidate key can uniquely identify a record in the table. It ensures that no two rows have the same value for the candidate key.
-* **Non-nullable**: Typically, candidate keys should not contain NULL values, although this can depend on specific database implementations.
-
-**Example**: In the `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each uniquely identify an employee. Thus, they are candidate keys. You might choose `EmployeeID` as the primary key, while `SocialSecurityNumber` and `Email` remain as candidate keys.
-
-```sql
-CREATE TABLE Employees (
-    EmployeeID INT,
-    SocialSecurityNumber VARCHAR(11),
-    Email VARCHAR(100),
-    PRIMARY KEY (EmployeeID),             -- Candidate Key: EmployeeID (chosen as primary key)
-    UNIQUE (SocialSecurityNumber),        -- Candidate Key: SocialSecurityNumber (unique but not chosen as primary key)
-    UNIQUE (Email)                        -- Candidate Key: Email (unique but not chosen as primary key)
-);
-```
-
-### 5. **Composite Key**
+### 4. **Composite Key**
 
 A composite key is a primary key that consists of two or more columns. It is used when a single column is not sufficient to uniquely identify a record.
 
@@ -129,7 +107,7 @@ CREATE TABLE CourseRegistrations (
 );
 ```
 
-### 6. **Super Key**
+### 5. **Super Key**
 
 <figure><img src=".gitbook/assets/Super Key.png" alt=""><figcaption></figcaption></figure>
 
@@ -150,6 +128,30 @@ CREATE TABLE Products (
     ProductName VARCHAR(100),
     SerialNumber VARCHAR(100),
     UNIQUE (ProductID, SerialNumber)         -- Unique constraint (it doesn't create a Composite Key:)
+);
+```
+
+### 6. **Candidate Key**
+
+A candidate key is a column (or a set of columns) that can uniquely identify any database record without referring to any other data. A table can have multiple candidate keys, and one of these is selected as the primary key.
+
+**Characteristics:**
+
+* **Primary Key Selection**: One candidate key is chosen as the primary key. The primary key is the main key used to uniquely identify records in the table. Other candidate keys that are not selected as the primary key are known as alternate keys.
+* **Multiple Keys**: A table can have multiple candidate keys. Each candidate key is a potential choice for the primary key.
+* **Uniqueness**: Each candidate key can uniquely identify a record in the table. It ensures that no two rows have the same value for the candidate key.
+* **Non-nullable**: Typically, candidate keys should not contain NULL values, although this can depend on specific database implementations.
+
+**Example**: In the `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each uniquely identify an employee. Thus, they are candidate keys. You might choose `EmployeeID` as the primary key, while `SocialSecurityNumber` and `Email` remain as candidate keys.
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT,
+    SocialSecurityNumber VARCHAR(11),
+    Email VARCHAR(100),
+    PRIMARY KEY (EmployeeID),             -- Candidate Key: EmployeeID (chosen as primary key)
+    UNIQUE (SocialSecurityNumber),        -- Candidate Key: SocialSecurityNumber (unique but not chosen as primary key)
+    UNIQUE (Email)                        -- Candidate Key: Email (unique but not chosen as primary key)
 );
 ```
 
