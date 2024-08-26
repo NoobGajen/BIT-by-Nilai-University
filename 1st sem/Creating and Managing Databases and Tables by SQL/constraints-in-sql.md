@@ -4,10 +4,10 @@ Constraints are rules applied to columns in a table to ensure the accuracy, vali
 
 Constraints can be broadly categorized into 2 types:&#x20;
 
-1.  Key Constraints
+1.  [Key Constraints](constraints-in-sql.md#id-1.-key-constraints)
 
     Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
-2.  Domain Constraints
+2.  [Domain Constraints](constraints-in-sql.md#id-2.-domain-constraints)
 
     Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
 
@@ -15,7 +15,7 @@ Constraints can be broadly categorized into 2 types:&#x20;
 
 Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
 
-### [Type of Key Constraints:](#user-content-fn-1)[^1]
+### Type of Key Constraints:
 
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
@@ -315,7 +315,7 @@ CREATE TABLE Customers (
 
 Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
 
-### Type of Domain Constraints
+### Type of Domain Constraints:
 
 ### 1. **Not Null Constraint**
 
@@ -376,5 +376,3 @@ CREATE TABLE Persons (
     Age INT CHECK (Age >= 18)               -- Check: Ensures age is at least 18
 );
 ```
-
-[^1]: Type of Key Constraints
