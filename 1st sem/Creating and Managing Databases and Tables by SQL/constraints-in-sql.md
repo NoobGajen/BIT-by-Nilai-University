@@ -17,7 +17,7 @@ Key Constraints are rules applied to columns in a database table to enforce the 
 
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
-## Type of Key Constraints
+### Type of Key Constraints
 
 ### 1. **Primary Key**
 
@@ -315,7 +315,7 @@ CREATE TABLE Customers (
 
 Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
 
-## Type of Domain Constraints
+### Type of Domain Constraints
 
 ### 1. **Not Null Constraint**
 
