@@ -1,8 +1,8 @@
 # Constraints in SQL
 
-Constraints are rules applied to columns in a table to ensure the accuracy, validity, and integrity of the data stored within a database. They enforce certain conditions on the data, preventing invalid entries and maintaining consistency across the database. By using constraints, we can define the specific properties of the data that can be stored, ensuring that the database operates reliably and according to the intended design.&#x20;
+Constraints are rules applied to columns in a table to ensure the accuracy, validity, and integrity of the data stored within a database. They enforce certain conditions on the data, preventing invalid entries and maintaining consistency across the database. By using constraints, we can define the specific properties of the data that can be stored, ensuring that the database operates reliably and according to the intended design.
 
-Constraints can be broadly categorized into 2 types:&#x20;
+Constraints can be broadly categorized into 2 types:
 
 1.  [Key Constraints](constraints-in-sql.md#id-1.-key-constraints)
 
@@ -78,36 +78,12 @@ A unique key ensures that all values in a column (or a set of columns) are uniqu
 
 ```sql
 CREATE TABLE Customers (
-    CustomerName VARCHAR(100),              -- Regular column for customer name
-    Email VARCHAR(100) UNIQUE               -- Unique Key: Ensures all email addresses are unique
+    CustomerName VARCHAR(100),      -- Regular column for customer name
+    Email VARCHAR(100) UNIQUE       -- Unique Key: Ensures all email addresses are unique
 );
 ```
 
-### 4. **Candidate Key**
-
-A candidate key is a column (or a set of columns) that can uniquely identify any database record without referring to any other data. A table can have multiple candidate keys, and one of these is selected as the primary key.
-
-**Characteristics:**
-
-* **Primary Key Selection**: One candidate key is chosen as the primary key. The primary key is the main key used to uniquely identify records in the table. Other candidate keys that are not selected as the primary key are known as alternate keys.
-* **Multiple Keys**: A table can have multiple candidate keys. Each candidate key is a potential choice for the primary key.
-* **Uniqueness**: Each candidate key can uniquely identify a record in the table. It ensures that no two rows have the same value for the candidate key.
-* **Non-nullable**: Typically, candidate keys should not contain NULL values, although this can depend on specific database implementations.
-
-**Example**: In the `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each uniquely identify an employee. Thus, they are candidate keys. You might choose `EmployeeID` as the primary key, while `SocialSecurityNumber` and `Email` remain as candidate keys.
-
-```sql
-CREATE TABLE Employees (
-    EmployeeID INT,
-    SocialSecurityNumber VARCHAR(11),
-    Email VARCHAR(100),
-    PRIMARY KEY (EmployeeID),             -- Candidate Key: EmployeeID (chosen as primary key)
-    UNIQUE (SocialSecurityNumber),        -- Candidate Key: SocialSecurityNumber (unique but not chosen as primary key)
-    UNIQUE (Email)                        -- Candidate Key: Email (unique but not chosen as primary key)
-);
-```
-
-### 5. **Composite Key**
+### 4. **Composite Key**
 
 A composite key is a primary key that consists of two or more columns. It is used when a single column is not sufficient to uniquely identify a record.
 
@@ -125,11 +101,11 @@ CREATE TABLE CourseRegistrations (
     StudentID INT,
     CourseID INT,
     RegistrationDate DATE,
-    PRIMARY KEY (StudentID, CourseID)  -- Composite Key: (combination of StudentID, CourseID)
+    PRIMARY KEY (StudentID, CourseID)      -- Composite Key: (combination of StudentID, CourseID)
 );
 ```
 
-### 6. **Super Key**
+### 5. **Super Key**
 
 <figure><img src=".gitbook/assets/Super Key.png" alt=""><figcaption></figcaption></figure>
 
@@ -146,10 +122,34 @@ A super key is a set of one or more columns that can uniquely identify a record 
 
 ```sql
 CREATE TABLE Products (
-    ProductID INT PRIMARY KEY,                -- Primary Key
+    ProductID INT PRIMARY KEY,            -- Primary Key
     ProductName VARCHAR(100),
     SerialNumber VARCHAR(100),
-    UNIQUE (ProductID, SerialNumber)         -- Unique constraint (it doesn't create a Composite Key:)
+    UNIQUE (ProductID, SerialNumber)      -- Unique constraint (it doesn't create a Composite Key:)
+);
+```
+
+### 6. **Candidate Key**
+
+A candidate key is a column (or a set of columns) that can uniquely identify any database record without referring to any other data. A table can have multiple candidate keys, and one of these is selected as the primary key.
+
+**Characteristics:**
+
+* **Primary Key Selection**: One candidate key is chosen as the primary key. The primary key is the main key used to uniquely identify records in the table. Other candidate keys that are not selected as the primary key are known as alternate keys.
+* **Multiple Keys**: A table can have multiple candidate keys. Each candidate key is a potential choice for the primary key.
+* **Uniqueness**: Each candidate key can uniquely identify a record in the table. It ensures that no two rows have the same value for the candidate key.
+* **Non-nullable**: Typically, candidate keys should not contain NULL values, although this can depend on specific database implementations.
+
+**Example**: In the `Employees` table, `EmployeeID`, `SocialSecurityNumber`, and `Email` can each uniquely identify an employee. Thus, they are candidate keys. You might choose `EmployeeID` as the primary key, while `SocialSecurityNumber` and `Email` remain as candidate keys.
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT,
+    SocialSecurityNumber VARCHAR(11),
+    Email VARCHAR(100),
+    PRIMARY KEY (EmployeeID),           -- Candidate Key: EmployeeID (chosen as primary key)
+    UNIQUE (SocialSecurityNumber),      -- Candidate Key: SocialSecurityNumber (unique but not chosen as primary key)
+    UNIQUE (Email)                      -- Candidate Key: Email (unique but not chosen as primary key)
 );
 ```
 
@@ -190,7 +190,7 @@ A surrogate key is an artificially created key that uniquely identifies each rec
 
 ```sql
 CREATE TABLE Products (
-    ProductID INT AUTO_INCREMENT PRIMARY KEY,         -- Surrogate key
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,      -- Surrogate key
     ProductName VARCHAR(100),
     SerialNumber VARCHAR(100)
 );
@@ -212,7 +212,7 @@ A natural key is a type of primary key that is derived from the data itself. It 
 ```sql
 CREATE TABLE Customers (
     CT_Name VARCHAR(20),
-    CT_Email VARCHAR(50) PRIMARY KEY,        -- Natural key
+    CT_Email VARCHAR(50) PRIMARY KEY,      -- Natural key
     CT_Password VARCHAR(50),
     CT_DOB Date
 );
@@ -233,7 +233,7 @@ A simple key is a single column in a table that is used to uniquely identify eac
 
 ```sql
 CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,        -- Simple key
+    CustomerID INT PRIMARY KEY,      -- Simple key
     FirstName VARCHAR(50),
     LastName VARCHAR(50)
 );
@@ -332,7 +332,7 @@ The Not Null constraint ensures that a column cannot contain `NULL` values. This
 ```sql
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,          
-    Name VARCHAR(100) NOT NULL,                   -- Not Null: Ensures Name cannot be NULL or leave as blank
+    Name VARCHAR(100) NOT NULL,      -- Not Null: Ensures Name cannot be NULL or leave as blank
     Salary DECIMAL(10, 2)
 );
 ```
@@ -352,8 +352,8 @@ The Default constraint automatically assigns a pre-defined value to a column if 
 ```sql
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,             		 
-    Name VARCHAR(100),                      		 -- Regular column for employee names
-    HireDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP     -- Default: Automatically sets hire date to the current date
+    Name VARCHAR(100),                      	      -- Regular column for employee names
+    HireDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP      -- Default: Automatically sets hire date to the current date
 );
 ```
 
@@ -372,7 +372,7 @@ The Check constraint enforces a specific condition that each row in the table mu
 ```sql
 CREATE TABLE Persons (
     PersonID INT PRIMARY KEY,               
-    Name VARCHAR(100),                      -- Regular column for person names
-    Age INT CHECK (Age >= 18)               -- Check: Ensures age is at least 18
+    Name VARCHAR(100),             -- Regular column for person names
+    Age INT CHECK (Age >= 18)      -- Check: Ensures age is at least 18
 );
 ```
