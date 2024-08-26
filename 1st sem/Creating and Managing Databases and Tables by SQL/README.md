@@ -1,21 +1,10 @@
-# Comprehensive Guide for Creating and Managing Databases and Tables in MySQL
+# Operations or Commands in MySQL
 
 ## Introduction to MySQL
 
 MySQL is an open-source relational database management system (RDBMS) based on Structured Query Language (SQL). It is widely used for managing and organizing data due to its reliability, ease of use, and support for various programming languages. MySQL is commonly used in web applications and is an essential component of the LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack.
 
-## Constraints in MySQL
-
-Constraints are rules applied to columns in a table to ensure the validity and integrity of the data. Common constraints include:
-
-* **NOT NULL**: Ensures that a column cannot have a NULL value.
-* **UNIQUE**: Ensures that all values in a column are unique.
-* **PRIMARY KEY**: Uniquely identifies each record in a table.
-* **FOREIGN KEY**: Ensures the referential integrity of the data in one table to match values in another table.
-* **CHECK**: Ensures that the value in a column meets a specific condition.
-* **DEFAULT**: Sets a default value for a column if no value is specified.
-
-***
+## Types of Operations or Commands in MySQL:
 
 ## Data Definition Language (DDL)
 
