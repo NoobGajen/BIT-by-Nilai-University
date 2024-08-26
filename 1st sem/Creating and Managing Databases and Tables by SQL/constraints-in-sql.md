@@ -1,4 +1,21 @@
-# Types of Keys in SQL
+# Constraints in SQL
+
+Constraints are rules applied to columns in a table to ensure the accuracy, validity, and integrity of the data stored within a database. They enforce certain conditions on the data, preventing invalid entries and maintaining consistency across the database. By using constraints, we can define the specific properties of the data that can be stored, ensuring that the database operates reliably and according to the intended design.&#x20;
+
+Constraints can be broadly categorized into 2 types:&#x20;
+
+1.  [Key Constraints](constraints-in-sql.md#id-1.-key-constraints)
+
+    Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
+2.  [Domain Constraints](constraints-in-sql.md#id-2.-domain-constraints)
+
+    Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
+
+## 1.) Key Constraints
+
+Key Constraints are rules applied to columns in a database table to enforce the uniqueness and integrity of data. They ensure that each record can be uniquely identified and that relationships between different tables are properly maintained.
+
+### Type of Key Constraints:
 
 <figure><img src=".gitbook/assets/Types of Keys in SQL.png" alt=""><figcaption></figcaption></figure>
 
@@ -293,3 +310,69 @@ CREATE TABLE Customers (
 * Used when an existing, meaningful unique identifier is present.
 
 **Example:** In a `Students` table, `StudentID` could be a surrogate key (an auto-incremented number) or a natural key (a government-issued student number).
+
+## 2.) Domain Constraints
+
+Domain Constraints are rules applied to columns to restrict the type, format, and range of data that can be entered. They ensure that the data stored in the column meets specific criteria and fits defined standards.
+
+### Type of Domain Constraints:
+
+### 1. **Not Null Constraint**
+
+The Not Null constraint ensures that a column cannot contain `NULL` values. This constraint is used when we want to make sure that every record in the table has a valid value for a particular column.
+
+**Characteristics:**
+
+* **Mandatory Values**: Requires that all entries in the column have a value. `NULL` values are not allowed.
+* **Data Integrity**: Ensures that the data is always present in the column, avoiding gaps or missing values.
+* **Column-Specific**: Applied to individual columns within a table.
+
+**Example**: In an `Employees` table, we may want to ensure that every employee has a `Name` recorded. By applying a `Not Null` constraint to the `Name` column, we ensure that no record can have a missing Name.
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,          
+    Name VARCHAR(100) NOT NULL,                   -- Not Null: Ensures Name cannot be NULL or leave as blank
+    Salary DECIMAL(10, 2)
+);
+```
+
+### 2. **Default Constraint**
+
+The Default constraint automatically assigns a pre-defined value to a column if no value is provided during an insert operation. This constraint is useful for ensuring consistency and reducing the need for manual input.
+
+**Characteristics:**
+
+* **Automatic Assignment**: Automatically fills the column with the default value if no explicit value is provided.
+* **Consistency**: Helps maintain uniformity in the data by ensuring that a default value is always used when necessary.
+* **Customizable**: The default value can be defined based on the specific requirements of the database.
+
+**Example**: In an `Employees` table, we might want to automatically assign the current date to the `hire_date` column when a new record is inserted, ensuring that every employee's hire date is recorded without manual entry.
+
+```sql
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,             		 
+    Name VARCHAR(100),                      		 -- Regular column for employee names
+    HireDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP     -- Default: Automatically sets hire date to the current date
+);
+```
+
+### 3. **Check Constraint**
+
+The Check constraint enforces a specific condition that each row in the table must satisfy. It is used to limit the values that can be placed in a column, ensuring that the data meets certain criteria.
+
+**Characteristics:**
+
+* **Conditional Enforcement**: Ensures that the data in the column meets a specified condition.
+* **Data Validation**: Acts as a form of data validation at the database level, preventing invalid data from being entered.
+* **Flexible**: The condition can be customized to match the specific needs of the application.
+
+**Example**: In a `Persons` table, we may want to ensure that the `age` of each person is at least 18 years. By applying a `Check` constraint, we can enforce this rule.
+
+```sql
+CREATE TABLE Persons (
+    PersonID INT PRIMARY KEY,               
+    Name VARCHAR(100),                      -- Regular column for person names
+    Age INT CHECK (Age >= 18)               -- Check: Ensures age is at least 18
+);
+```
