@@ -255,8 +255,8 @@ CREATE TABLE Customers (
 **Unique Key:**
 
 * Ensures that all values in the unique key column(s) are unique.
-* Can include NULL values (depending on SQL implementation).
 * A table can have multiple unique keys.
+* Can include NULL values (depending on SQL implementation).
 * Used to enforce uniqueness in a column or set of columns but does not serve as the primary identifier.
 
 **Example:** In a `Customers` table, `CustomerID` might be the primary key, while `Email` could be a unique key ensuring no duplicate email addresses.
