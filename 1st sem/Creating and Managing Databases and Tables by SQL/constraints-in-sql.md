@@ -65,7 +65,7 @@ CREATE TABLE Orders (
 
 -- OR, Adding column in existing table
 ALTER TABLE `order` ADD custno INT;         -- creating column in order table
-ALTER TABLE `order` ADD FOREIGN KEY (custno) REFERENCES customer(custno); -- referencing column in customer table
+ALTER TABLE `order` ADD FOREIGN KEY (custno) REFERENCES customer(custno);         -- referencing column in customer table
 ```
 
 ### 3. **Unique Key**
