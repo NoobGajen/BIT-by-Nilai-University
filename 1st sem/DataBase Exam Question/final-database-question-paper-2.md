@@ -18,7 +18,7 @@ A **Database Management System (DBMS)** is software that allows users to create,
 
 ### b.) Differentiate between:
 
-&#x20;i) Logical and physical data independence
+#### &#x20;i.) Logical and physical data independence
 
 
 
@@ -33,7 +33,7 @@ A **Database Management System (DBMS)** is software that allows users to create,
 
 
 
-ii) External and conceptual level.
+#### ii.) External and conceptual level.
 
 
 
