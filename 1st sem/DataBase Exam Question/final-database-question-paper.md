@@ -123,6 +123,8 @@
 
 ### **Question 2** <a href="#question-1" id="question-1"></a>
 
+#### Q.2.a.)
+
 2.  a.) Read the following description carefully. State appropriate assumptions and devise the corresponding EAR model:&#x20;
 
     The Selangor Stage Coach Co. provides services to the greater Selangor municipal, including various towns around the state capital.&#x20;
@@ -184,13 +186,42 @@
        * One-to-Many (One route can have multiple buses; each bus belongs to one route)
     2. **Route to Town**:
        * Many-to-Many (A route passes through multiple towns, and towns can be served by multiple routes)
-       * This relationship will require a junction entity, which is **Journey**.
     3. **Driver to Journey**:
        * One-to-Many (One driver can be assigned to multiple journeys, but each journey has specific drivers for that segment)
 
+#### Q.2.b.)
+
+2.  b.) Devise a relational database schema to demonstrate how you will map your EAR model in (a) onto tables in a relational database. Identify the primary keys / foreign keys in each entity.
 
 
 
+    **Answer:-**
+
+    1. **Bus Table**
+       * **Primary Key**: Bus\_Number
+       * **Attributes**:
+         * Seating\_Capacity
+         * Make\_Type
+    2. **Route Table**
+       1. **Primary Key**: Route\_Number
+       2. **Attributes**:
+          * Average\_Passengers
+    3. **Town Table**
+       1. **Primary Key**: Town\_Name
+       2. **Attributes**:
+          * Location
+    4. **Driver Table**
+       1. **Primary Key**: Employee\_Number
+       2. **Attributes**:
+          * Name
+            * Address
+            * Telephone\_Number
+    5. **Journey Table**
+       1. **Primary Key**: Journey\_ID
+       2. **Foreign Keys**:
+          * Route\_Number references Route(Route\_Number)
+          * Town\_Name references Town(Town\_Name)
+          * Driver\_Employee\_Number references Driver(Employee\_Number)
 
 
 
