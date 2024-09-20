@@ -1,10 +1,10 @@
 # Final - Database Question Paper
 
-## **Question 1**
+### **Question 1**
 
 **SP Bumi Transport** has decided to build a database to help manage its operations. It is interested in keeping track of Its buses, The terminals to which buses stop, Passengers and the trips they have taken, Its employees, and data about the Maintenance of its buses.
 
-
+#### Q.1.a.)
 
 1.  Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.                                                                                                                                   **(7 MARKS)**
 
@@ -59,6 +59,8 @@
         * Payment method (cash, card, etc.)
 
 
+
+    Q.1.b.)
 2.  Suggest THREE (3) reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage?                                                                                                                   **(6 MARKS)**
 
 
