@@ -413,7 +413,7 @@ Nepal Airlines has to keep track of its flight and airplane history. A flight is
 
 A pilot is identified by a unique pilot (or employee) number. A flight on aparticular date has exactly one pilot. Each pilot has typically flown many flightsbut a pilot may be new to the company, is in training, and has not flown anyflights, yet. Each airplane has a unique serial number. A flight on a particulardate used one airplane. Each airplane has flown on many flights and dates, buta new airplane may not have been used at all, yet.
 
-<figure><img src=".gitbook/assets/Final database question paper 1 Question 4 .png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Final database question paper Question 4 .png" alt=""><figcaption></figcaption></figure>
 
 ### Write SQL SELECT commands to answer the following queries.&#x20;
 
