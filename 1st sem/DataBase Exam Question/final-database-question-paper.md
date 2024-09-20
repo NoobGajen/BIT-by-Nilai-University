@@ -1,10 +1,10 @@
 # Final - Database Question Paper
 
-### **Question 1**
+## **Question 1**
 
 **SP Bumi Transport** has decided to build a database to help manage its operations. It is interested in keeping track of Its buses, The terminals to which buses stop, Passengers and the trips they have taken, Its employees, and data about the Maintenance of its buses.
 
-#### Q.1.a.)
+### Q.1.a.)
 
 1.  a.) Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.                                                                                                                                   **(7 MARKS)**
 
@@ -57,7 +57,7 @@
        * Date of purchase
        * Payment method (cash, card, etc.)
 
-#### Q.1.b.)
+### Q.1.b.)
 
 1.  b.) Suggest THREE (3) reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage?                                                                                                                   **(6 MARKS)**
 
@@ -77,7 +77,7 @@
        This report focuses on ticket sales, covering total revenue, ticket types (e.g., one-way, round-trip), and payment methods used (cash, card, etc.).
        * **Benefit**: By tracking ticket sales and revenue, SP Bumi can identify which routes are most profitable and adjust pricing or services accordingly. It will also help in financial planning and identifying areas to increase revenue.
 
-#### Q.1.c.)
+### Q.1.c.)
 
 1.  c.) Describe the **THREE(3)** main characteristics of the database approach and contrast it with the file-based approach.
 
@@ -99,7 +99,7 @@
 
 
 
-#### Q.1.d.)
+### Q.1.d.)
 
 1.  d) Explain the differences of **Data Definition Language (DDL)** and **Data Manipulation Language (DML)**.                                                                                                                                                 **(6 MARKS)**
 
@@ -121,9 +121,9 @@
     | **4. Transaction Control** | DDL statements are usually auto-committed and cannot be rolled back.             | DML statements can be rolled back or committed, allowing transaction control. |
     | **5. Usage**               | Typically used by database administrators or applications, not by regular users. | Commonly used by both users and applications to interact with data.           |
 
-### **Question 2** <a href="#question-1" id="question-1"></a>
+## **Question 2** <a href="#question-1" id="question-1"></a>
 
-#### Q.2.a.)
+### Q.2.a.)
 
 2.  a.) Read the following description carefully. State appropriate assumptions and devise the corresponding EAR model:&#x20;
 
@@ -189,7 +189,7 @@
     3. **Driver to Journey**:
        * One-to-Many (One driver can be assigned to multiple journeys, but each journey has specific drivers for that segment)
 
-#### Q.2.b.)
+### Q.2.b.)
 
 2.  b.) Devise a relational database schema to demonstrate how you will map your EAR model in (a) onto tables in a relational database. Identify the primary keys / foreign keys in each entity.
 
@@ -225,7 +225,7 @@
 
 
 
-### Question 3&#x20;
+## Question 3&#x20;
 
 Table 1 shows list of dentist / patient appointment data. A patient Is given an appointment at a specific time and date with a dentist located at a particular surgery. On each day of patient's appointments, a dentist is allocated to a specific surgery for that day.
 
@@ -239,7 +239,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 | S1024     | Aruna         | P105    | Andrew    | 14-Sep-17 12:00         | S10         |
 | S1032     | Robin         | P105    | Wong      | 14-Sep-17 10:00         | S15         |
 
-#### Q.3.a.)
+### Q.3.a.)
 
 3.  a.) The shown Table is susceptible to update anomalies. Provide **ONE (1)** example of insertion, deletion and update anomalies.
 
@@ -280,7 +280,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
                 * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S15 (old information)
                 * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S25 (updated information)
 
-#### Q.3.b.)
+### Q.3.b.)
 
 3.  b.) Illustrate the process of normalizing Table 1 to 3NF relations. Identify the primary key, alternate and foreign keys in your 3NF relations.
 
@@ -381,6 +381,54 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
     | ----------- | --------- |
     | S15         | S1011     |
     | S10         | S1024     |
+
+### Q.3.c.)
+
+3.  c.) Define Boyce Codd Normal Form (BCNF) and identify the relation you normalized in (b) is in BCNF already or not .
+
+
+
+    **Answer:-**
+
+    Boyce-Codd Normal Form (BCNF) is an extension of the Third Normal Form (3NF). A relation is in BCNF if, for every one of its non-trivial functional dependencies (X → Y), X is a superkey. This means that the left side of every non-trivial functional dependency must be a candidate key. BCNF addresses certain anomalies that can occur in 3NF by ensuring that there are no overlapping candidate keys that could lead to redundancy.
+
+
+
+    To determine if the normalized relations from part (b) are in BCNF, we need to analyze each relation and their functional dependencies:
+
+    1. **Dentist\_Info (Staff\_No, Dentist\_Name, Surgery\_No)**
+       * Functional Dependencies:
+         * Staff\_No → Dentist\_Name, Surgery\_No
+       * Since Staff\_No is a primary key (and thus a superkey), this relation is in BCNF.
+    2. **Patient\_Appointments (Pat\_No, Pat\_Name, Appointment\_Date\_Time)**
+       * Functional Dependencies:
+         * Pat\_No → Pat\_Name
+       * Here, Pat\_No is a primary key and a superkey. Therefore, this relation is also in BCNF.
+    3. **Surgery\_Info (Surgery\_No, Staff\_No)**
+       * Functional Dependencies:
+         * Surgery\_No → Staff\_No
+       * Surgery\_No is not a superkey since it does not uniquely identify all the attributes in this relation. Hence, this relation violates the BCNF condition.
+
+### Q.3.d.)
+
+3.  d) What Is the purpose of normalization?
+
+
+
+    Normalization is a process in database design aimed at organizing data to reduce redundancy and improve data integrity. The key purposes of normalization are:
+
+    1. **Eliminating Redundancy**:
+       * By organizing data into separate tables, normalization minimizes duplicate data, which saves storage space and reduces inconsistency.
+    2. **Ensuring Data Integrity**:
+       * Normalization helps maintain accuracy and consistency of data. By structuring data properly, updates, inserts, and deletions are managed more effectively, preventing anomalies.
+    3. **Facilitating Data Maintenance**:
+       * A well-normalized database is easier to maintain and update. Changes in data structures require fewer adjustments, making database management more efficient.
+    4. **Improving Query Performance**:
+       * Normalization can lead to more efficient query execution by streamlining the data organization, making it easier for the database engine to retrieve relevant data.
+    5. **Establishing Clear Relationships**:
+       * By defining relationships between tables through foreign keys, normalization helps clarify how different data entities interact, aiding in data retrieval and analysis.
+    6. **Supporting Scalability**:
+       * A normalized database structure is typically more flexible and can adapt better to changes in data requirements or application needs, supporting future growth.
 
 
 
