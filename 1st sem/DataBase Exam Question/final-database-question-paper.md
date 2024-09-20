@@ -249,3 +249,36 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 
 
 
+    Here are examples of insertion, deletion, and update anomalies based on the provided dentist-patient appointment table:
+
+    1.  **Insertion Anomaly** If a new dentist is hired (e.g., Dr. Smith) but has not yet seen any patients, we cannot add their information to the table without also adding a dummy appointment for them. This leads to redundant data or inaccurate entries in the appointment records.
+
+        **Example:**
+
+        * Attempting to insert Dr. Smith's details:
+          * Staff\_No: S1040
+          * Dentist\_Name: Smith
+          * Pat\_No: (no patient assigned yet)
+          * Pat\_Name: (no patient assigned yet)
+          * Appointment\_Date\_Time: (needs a dummy date/time)
+          * Surgery\_No: S20
+        *   **Deletion Anomaly** If we delete a patient's appointment (e.g., Roiana's appointment with Dr. Zara), we might unintentionally lose the information about the dentist (Dr. Zara) if that was the only appointment recorded for them.
+
+            **Example:**
+
+            * Deleting Roiana's appointment:
+              * Row: (S1011, Zara, P100, Roiana, 12-Sep-17 10:00, S15)
+              * Result: If this is the only record for Dr. Zara, we lose all information about Dr. Zara.
+        *   **Update Anomaly**&#x20;
+
+            If a dentist's information (e.g., their name or surgery number) changes, we must update every record where that dentist appears. If we forget to update some records, it leads to inconsistencies in the data.
+
+            **Example:**
+
+            * Updating Dr. Zara's surgery number from S15 to S25:
+              * We must update all entries with Dr. Zara’s information. If we miss one:
+                * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S15 (old information)
+                * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S25 (updated information)
+
+
+
