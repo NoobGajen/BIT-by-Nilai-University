@@ -225,3 +225,27 @@
 
 
 
+### Question 3&#x20;
+
+Table 1 shows list of dentist / patient appointment data. A patient Is given an appointment at a specific time and date with a dentist located at a particular surgery. On each day of patient's appointments, a dentist is allocated to a specific surgery for that day.
+
+
+
+| Staff\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_date\_time | Surgery\_No |
+| --------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| S1011     | Zara          | P100    | Roiana    | 12-Sep-17 10:00         | S15         |
+| S1011     | Zara          | P105    | Tiagu     | 12-Sep-17 12:00         | S15         |
+| S1024     | Aruna         | P108    | Andrew    | 12-Sep-17 10:00         | S10         |
+| S1024     | Aruna         | P105    | Andrew    | 14-Sep-17 12:00         | S10         |
+| S1032     | Robin         | P105    | Wong      | 14-Sep-17 10:00         | S15         |
+
+#### Q.3.a.)
+
+3.  a.) The shown Table is susceptible to update anomalies. Provide **ONE (1)** example of insertion, deletion and update anomalies.
+
+
+
+    **Answer:-**
+
+
+
