@@ -6,7 +6,7 @@
 
 
 
-1.  Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.
+1.  Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.                                                                                                                                   **(7 MARKS)**
 
 
 
@@ -50,12 +50,34 @@
        * Maintenance date
        * Maintenance type (e.g., engine check, tire change)
        * Mechanic involved
-    7. **Ticket Sales**\
-       For managing revenue and operations, tracking ticket sales is important. This includes:
-       * Ticket ID
-       * Price of the ticket
-       * Date of purchase
-       * Payment method (cash, card, etc.)
+    7.  **Ticket Sales**\
+        For managing revenue and operations, tracking ticket sales is important. This includes:
+
+        * Ticket ID
+        * Price of the ticket
+        * Date of purchase
+        * Payment method (cash, card, etc.)
+
+
+2.  Suggest THREE (3) reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage?                                                                                                                   **(6 MARKS)**
+
+
+
+    **Answer:-**
+
+
+
+    Three reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage are:
+
+    1. **Bus Performance and Maintenance Report**\
+       This report tracks the performance of each bus, including fuel consumption, breakdowns, and maintenance history.
+       * **Benefit**: By regularly monitoring the performance, SP Bumi can ensure their buses are reliable, reducing downtime and repair costs. It will also help them schedule preventive maintenance, keeping the buses in good condition.
+    2. **Passenger Trip Report**\
+       This report contains details about passengers, such as how frequently they travel, which routes they prefer, and their feedback (if available).
+       * **Benefit**: With this report, SP Bumi can analyze passenger travel patterns and preferences, allowing them to offer better services, adjust routes, or launch promotions. This improves customer satisfaction and retention.
+    3. **Revenue and Ticket Sales Report**\
+       This report focuses on ticket sales, covering total revenue, ticket types (e.g., one-way, round-trip), and payment methods used (cash, card, etc.).
+       * **Benefit**: By tracking ticket sales and revenue, SP Bumi can identify which routes are most profitable and adjust pricing or services accordingly. It will also help in financial planning and identifying areas to increase revenue.
 
 
 
