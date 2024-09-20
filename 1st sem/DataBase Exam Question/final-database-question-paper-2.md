@@ -90,7 +90,56 @@ Before the project starts, you have to collect and analyze the data requirements
 * Management staff will have more than one appointment.
 * Each appointment will have one client.
 
-### a) Draw the complete entity-relationship (ER) diagram by showing the type of relationships between entities and cardinality constraints for the scenario above.
+### a) Draw the complete entity-relationship (ER) diagram by showing the type of relationships between entities and cardinality constraints for the scenario above.                                        (20 MARKS)
+
+#### **Answer:-**
+
+In an ER diagram, entities are represented as rectangles, attributes as ovals, and relationships as diamonds. Cardinality constraints are denoted using lines and numbers to show how many instances of one entity can be associated with instances of another.
+
+Based on the given scenario, here is the ER diagram:
+
+<figure><img src=".gitbook/assets/Final database question paper 2 Question 2.a.1.png" alt=""><figcaption><p>ER diagram by using Crow's Foot Notation</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Final database question paper 2 Question 2.a.2.png" alt=""><figcaption><p>ER diagram by using Chen Notation</p></figcaption></figure>
+
+
+
+### b.) Explain the TWO (2) types of constraints that may apply to specialization or generalization.                                        (3 MARKS)
+
+The two types of constraints that may apply to specialization or generalization are:
+
+1. **Disjointness Constraint**:
+   * This constraint defines whether an entity can belong to more than one subclass (specialization) or not.
+   * **Disjoint Rule**: An entity can only belong to one subclass at a time. For example, if an entity belongs to the "Clerk" subclass, it cannot belong to the "Management Staff" subclass.
+   * **Overlap Rule**: An entity can belong to more than one subclass at the same time. For example, a person can be both a "Clerk" and a "Management Staff" at the same time.
+2. **Participation Constraint**:
+   * This constraint specifies whether all entities in the superclass must be a member of at least one subclass or not.
+   * **Total Participation**: Every entity in the superclass must belong to at least one subclass. For example, every staff must be either a "Clerk" or "Management Staff."
+   * **Partial Participation**: Some entities in the superclass may not belong to any subclass. For example, a staff may not need to belong to either subclass.
+
+### c.) Define derived attribute. Provide an example for derived attribute.
+
+A derived attribute is an attribute whose value is calculated or derived from other attributes in the database, rather than being directly stored. It is not physically stored in the database but is computed whenever needed.
+
+#### Example:
+
+In a payroll system, **age** can be a derived attribute if we store a person's **birthdate** in the database. The value of the age can be derived by subtracting the birthdate from the current date.
+
+**Example of a derived attribute:**
+
+```plaintext
+Age = Current Date - Birthdate
+```
+
+In this case, **Age** is derived from the **Birthdate** and does not need to be stored directly in the database.
+
+
+
+
+
+
+
+
 
 
 
