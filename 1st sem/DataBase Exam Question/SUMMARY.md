@@ -1,5 +1,6 @@
 # Table of contents
 
-* [Question Paper - 1](README.md)
-* [Question Paper - 2](question-paper-2.md)
-* [Question Paper - 3](question-paper-3.md)
+* [Semi - Question Paper - 1](README.md)
+* [Semi - Question Paper - 2](semi-question-paper-2.md)
+* [Semi - Question Paper - 3](semi-question-paper-3.md)
+* [Final - Database Question Paper](final-database-question-paper.md)
