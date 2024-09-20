@@ -121,6 +121,75 @@
     | **4. Transaction Control** | DDL statements are usually auto-committed and cannot be rolled back.             | DML statements can be rolled back or committed, allowing transaction control. |
     | **5. Usage**               | Typically used by database administrators or applications, not by regular users. | Commonly used by both users and applications to interact with data.           |
 
+### **Question 2** <a href="#question-1" id="question-1"></a>
+
+2.  a.) Read the following description carefully. State appropriate assumptions and devise the corresponding EAR model:&#x20;
+
+    The Selangor Stage Coach Co. provides services to the greater Selangor municipal, including various towns around the state capital.&#x20;
+
+    It owns a substantial number of buses. Each bus is allocated to a particular route, although some routes may have several buses. Each bus has a unique bus number. It Is Important to store information about the seating capacity and the make/type of all buses.&#x20;
+
+    Each route, distinguish by a route number, passes through a number of towns. Several routes may serve the same town. Information Is available on the average number of passengers carried per day for each route.&#x20;
+
+    Due to long travelling time, one or more drivers are assigned to each stage of a route, which corresponds to a journey through a town on a route. Drivers have an employee number, name, address and sometimes a telephone number.\
+
+
+    **Answer:-**
+
+
+
+    **Assumptions for Entity-Relationship (ER) model**
+
+    1. Each bus can only be assigned to one route at a time, but multiple buses can operate on the same route.
+       1. Each route can serve multiple towns.
+       2. Each town can be served by multiple routes.
+       3. A driver can be assigned to multiple journeys but can work on one stage at a time.
+       4. Average daily passengers for each route are based on historical data.
+
+
+
+    **Entities for Entity-Relationship (ER) model**
+
+    1. **Bus**
+       * Entities:
+         * Bus Number (Primary Key)
+         * Seating Capacity
+         * Make/Type
+    2. **Route**
+       * Entities:
+         * Route Number (Primary Key)
+         * Average Passengers Carried Per Day
+    3. **Town**
+       * Entities:
+         * Town Name (Primary Key)
+         * Location (Optional)
+    4. **Driver**
+       * Entities:
+         * Employee Number (Primary Key)
+         * Name
+         * Address
+         * Telephone Number (Optional)
+    5. **Journey** (to represent the stages of a route through towns)
+       *   Entities:
+
+           * Journey ID (Primary Key)
+           * Route Number (Foreign Key)
+           * Town Name (Foreign Key)
+
+
+
+    **Relationships for Entity-Relationship (ER) model**
+
+    1. **Bus to Route**:
+       * One-to-Many (One route can have multiple buses; each bus belongs to one route)
+    2. **Route to Town**:
+       * Many-to-Many (A route passes through multiple towns, and towns can be served by multiple routes)
+       * This relationship will require a junction entity, which is **Journey**.
+    3. **Driver to Journey**:
+       * One-to-Many (One driver can be assigned to multiple journeys, but each journey has specific drivers for that segment)
+
+
+
 
 
 
