@@ -438,35 +438,88 @@ Nepal Airlines has to keep track of its flight and airplane history. A flight is
 
 A pilot is identified by a unique pilot (or employee) number. A flight on aparticular date has exactly one pilot. Each pilot has typically flown many flightsbut a pilot may be new to the company, is in training, and has not flown anyflights, yet. Each airplane has a unique serial number. A flight on a particulardate used one airplane. Each airplane has flown on many flights and dates, buta new airplane may not have been used at all, yet.
 
-The following describes the attributes for each entity.
+<figure><img src=".gitbook/assets/Final database question paper Question 4 .png" alt=""><figcaption></figcaption></figure>
 
-#### **PILOT**
+### Write SQL SELECT commands to answer the following queries.&#x20;
 
-| PILOTNUM | PILOTNAME | BIRTHDATE | HIREDATE |
-| -------- | --------- | --------- | -------- |
-|          |           |           |          |
+#### 4.a) Find the records for the airplanes manufactured by Boeing.
 
-#### **FLIGHT**
+```sql
+SELECT *
+FROM AIRPLANE
+WHERE MANUF = 'Boeing';
+```
 
-| FLIGHTNUM | DATE | DEPTIME | ARRTIME | PILOTNUM | PLANENUM |
-| --------- | ---- | ------- | ------- | -------- | -------- |
-|           |      |         |         |          |          |
+#### 4.b) How many reservations are there for flight 278 on February 21, 2017?
 
-#### **PASSENGER**
+```sql
+SELECT COUNT(*)
+FROM RESERVATION
+WHERE FLIGHTNUM = 278 AND DATE = '2017-02-21';
+```
 
-| PASSNUM | PASSNAME | ADDRESS | PHONE |
-| ------- | -------- | ------- | ----- |
-|         |          |         |       |
+#### 4.c) List the flights on March 7, 2017, that are scheduled to depart between 10 and 11 AM or that are scheduled to arrive after 3 PM on that date.
 
-#### **RESERVATION**
+```sql
+SELECT *
+FROM FLIGHT
+WHERE DATE = '2017-03-07' AND (DEPTIME BETWEEN '10:00' AND '11:00' OR ARRTIME > '15:00');
+```
 
-| FLIGHTNUM | DATE | PASSNUM | FARE | RESVDATE |
-| --------- | ---- | ------- | ---- | -------- |
-|           |      |         |      |          |
+#### 4.d) How many Boeing 737s does Grand Travel have?
 
-#### **AIRPLANE**
+```sql
+SELECT COUNT(*)
+FROM AIRPLANE
+WHERE MANUF = 'Boeing' AND MODEL = '737';
+```
 
-| PLANENUM | MODEL | CAPACITY | YEARBUILT | MANUF |
-| -------- | ----- | -------- | --------- | ----- |
-|          |       |          |           |       |
+#### 4.e) How many of each model of Boeing aircraft does Grand Travel have?
+
+```sql
+SELECT MODEL, COUNT(*) AS COUNT
+FROM AIRPLANE
+WHERE MANUF = 'Boeing'
+GROUP BY MODEL;
+```
+
+#### 4.f) List the names and dates of hire of the pilots who flew Airbus A320 aircraft in March 2017.
+
+```sql
+SELECT P.PILOTNAME, P.HIREDATE
+FROM PILOT P
+JOIN FLIGHT F ON P.PILOTNUM = F.PILOTNUM
+JOIN AIRPLANE A ON F.PLANENUM = A.PLANENUM
+WHERE A.MODEL = 'A320' AND F.DATE BETWEEN '2017-03-01' AND '2017-03-31';
+```
+
+#### 4.g) List the names, addresses, and telephone numbers of the passengers who have reservations on Flight 562 on January 15, 2017.
+
+```sql
+SELECT PA.PASSNAME, PA.ADDRESS, PA.PHONE
+FROM PASSENGER PA
+JOIN RESERVATION R ON PA.PASSNUM = R.PASSNUM
+WHERE R.FLIGHTNUM = 562 AND R.DATE = '2017-01-15';
+```
+
+#### 4.h) What was the total fare paid for each flight scheduled to depart between 9 and 10 AM on December 23, 2003? Only include those flights for which the total fare was at least 55,000.
+
+```sql
+SELECT R.FLIGHTNUM, SUM(R.FARE) AS TOTAL_FARE
+FROM RESERVATION R
+JOIN FLIGHT F ON R.FLIGHTNUM = F.FLIGHTNUM
+WHERE F.DEPTIME BETWEEN '09:00' AND '10:00' AND F.DATE = '2003-12-23'
+GROUP BY R.FLIGHTNUM
+HAVING SUM(R.FARE) >= 55000;
+```
+
+#### 4.i) List the smallest (in terms of passenger capacity) Boeing 737s.
+
+```sql
+SELECT *
+FROM AIRPLANE
+WHERE MANUF = 'Boeing' AND MODEL = '737'
+ORDER BY CAPACITY ASC
+LIMIT 1;
+```
 
