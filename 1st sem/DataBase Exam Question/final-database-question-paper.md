@@ -6,7 +6,7 @@
 
 ### Q.1.a.)
 
-1.  a.) Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.                                                                                                                                   **(7 MARKS)**
+1.  a.) Using this introductory description of (and hints about) the SP Bumi Transport, make a list of the \*\*SEVEN (7) things in the company's environment about which the company would want to maintain data.                                                                                                    **(7 MARKS)**
 
 
 
@@ -59,7 +59,7 @@
 
 ### Q.1.b.)
 
-1.  b.) Suggest THREE (3) reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage?                                                                                                                   **(6 MARKS)**
+1.  b.) Suggest THREE (3) reports that SP Bumi Transport could use to improve its operations and gain a competitive advantage?                                                                                                     (**6 MARKS)**
 
 
 
@@ -79,7 +79,7 @@
 
 ### Q.1.c.)
 
-1.  c.) Describe the **THREE(3)** main characteristics of the database approach and contrast it with the file-based approach.
+1.  c.) Describe the **THREE(3)** main characteristics of the database approach and contrast it with the file-based approach.                                                                                                    **(6 MARKS)**
 
 
 
@@ -101,7 +101,7 @@
 
 ### Q.1.d.)
 
-1.  d) Explain the differences of **Data Definition Language (DDL)** and **Data Manipulation Language (DML)**.                                                                                                                                                 **(6 MARKS)**
+1.  d) Explain the differences of **Data Definition Language (DDL)** and **Data Manipulation Language (DML)**.                                                                                                    **(6 MARKS)**
 
 
 
@@ -125,7 +125,7 @@
 
 ### Q.2.a.)
 
-2.  a.) Read the following description carefully. State appropriate assumptions and devise the corresponding EAR model:&#x20;
+2.  a.) Read the following description carefully. State appropriate assumptions and devise the corresponding EAR model:                                                                                                     **(15 MARKS)**
 
     The Selangor Stage Coach Co. provides services to the greater Selangor municipal, including various towns around the state capital.&#x20;
 
@@ -191,7 +191,7 @@
 
 ### Q.2.b.)
 
-2.  b.) Devise a relational database schema to demonstrate how you will map your EAR model in (a) onto tables in a relational database. Identify the primary keys / foreign keys in each entity.
+2.  b.) Devise a relational database schema to demonstrate how you will map your EAR model in (a) onto tables in a relational database. Identify the primary keys / foreign keys in each entity.                                                                                                    **(10 MARKS)**
 
 
 
@@ -241,7 +241,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 
 ### Q.3.a.)
 
-3.  a.) The shown Table is susceptible to update anomalies. Provide **ONE (1)** example of insertion, deletion and update anomalies.
+3.  a.) The shown Table is susceptible to update anomalies. Provide **ONE (1)** example of insertion, deletion and update anomalies.                                                                                                    **(6 MARKS)**
 
 
 
@@ -282,7 +282,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 
 ### Q.3.b.)
 
-3.  b.) Illustrate the process of normalizing Table 1 to 3NF relations. Identify the primary key, alternate and foreign keys in your 3NF relations.
+3.  b.) Illustrate the process of normalizing Table 1 to 3NF relations. Identify the primary key, alternate and foreign keys in your 3NF relations.                                                                                                    **(14 MARKS)**
 
 
 
@@ -384,7 +384,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 
 ### Q.3.c.)
 
-3.  c.) Define Boyce Codd Normal Form (BCNF) and identify the relation you normalized in (b) is in BCNF already or not .
+3.  c.) Define Boyce Codd Normal Form (BCNF) and identify the relation you normalized in (b) is in BCNF already or not .                                                                                                    **(3 MARKS)**
 
 
 
@@ -411,7 +411,7 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
 
 ### Q.3.d.)
 
-3.  d) What Is the purpose of normalization?
+3.  d) What Is the purpose of normalization?                                                                                                    **(2 MARKS)**
 
 
 
@@ -430,7 +430,43 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
     6. **Supporting Scalability**:
        * A normalized database structure is typically more flexible and can adapt better to changes in data requirements or application needs, supporting future growth.
 
+## Question 4
 
+Consider the following relational database for Nepal Airlines.
 
+Nepal Airlines has to keep track of its flight and airplane history. A flight is uniquely identified by the combination of a flight number and a date. Every passenger who has flown on Nepal Airlines has a unique passenger number. For a particular passenger who has taken a particular flight, the company wants to keep track of the fare that she paid for it and the date that she made the reservation for it. Clearly, a passenger may have taken many flights (he must have taken at least one to be in the database) and every flight has had many passengers on it.
 
+A pilot is identified by a unique pilot (or employee) number. A flight on aparticular date has exactly one pilot. Each pilot has typically flown many flightsbut a pilot may be new to the company, is in training, and has not flown anyflights, yet. Each airplane has a unique serial number. A flight on a particulardate used one airplane. Each airplane has flown on many flights and dates, buta new airplane may not have been used at all, yet.
+
+The following describes the attributes for each entity.
+
+#### **PILOT**
+
+| PILOTNUM | PILOTNAME | BIRTHDATE | HIREDATE |
+| -------- | --------- | --------- | -------- |
+|          |           |           |          |
+
+#### **FLIGHT**
+
+| FLIGHTNUM | DATE | DEPTIME | ARRTIME | PILOTNUM | PLANENUM |
+| --------- | ---- | ------- | ------- | -------- | -------- |
+|           |      |         |         |          |          |
+
+#### **PASSENGER**
+
+| PASSNUM | PASSNAME | ADDRESS | PHONE |
+| ------- | -------- | ------- | ----- |
+|         |          |         |       |
+
+#### **RESERVATION**
+
+| FLIGHTNUM | DATE | PASSNUM | FARE | RESVDATE |
+| --------- | ---- | ------- | ---- | -------- |
+|           |      |         |      |          |
+
+#### **AIRPLANE**
+
+| PLANENUM | MODEL | CAPACITY | YEARBUILT | MANUF |
+| -------- | ----- | -------- | --------- | ----- |
+|          |       |          |           |       |
 
