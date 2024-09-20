@@ -280,5 +280,109 @@ Table 1 shows list of dentist / patient appointment data. A patient Is given an 
                 * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S15 (old information)
                 * Staff\_No: S1011, Dentist\_Name: Zara, Surgery\_No: S25 (updated information)
 
+#### Q.3.b.)
+
+3.  b.) Illustrate the process of normalizing Table 1 to 3NF relations. Identify the primary key, alternate and foreign keys in your 3NF relations.
+
+
+
+    **Answer:-**
+
+    **Normalization Process from 1NF to 3NF**
+
+    1. **First Normal Form (1NF)**:
+       * **Atomic Values**: Each column must contain atomic (indivisible) values, meaning that each value is a single piece of data.
+       * **No Repeating Groups**: There should be no columns that contain multiple values or arrays. If any row includes several values for the same attribute, we need to restructure the table.
+       * **Unique Rows**: Each row must be uniquely identifiable. This often involves creating a primary key to ensure that no two rows are identical.
+    2. **Second Normal Form (2NF)**:
+       * **Full Dependency**: All non-key attributes must be fully dependent on the entire primary key. This prevents partial dependency, where a non-key attribute depends on only part of a composite primary key.
+       * **Elimination of Redundancy**: By separating out non-key attributes that are only partially dependent on the primary key, we reduce redundancy, ensuring that changes to data only need to be made in one place.
+       * **Separate Tables for Related Data**: If a non-key attribute is related to a subset of the primary key, it should be moved to a new table that captures that relationship.
+    3.  **Third Normal Form (3NF)**:
+
+        * **No Transitive Dependencies**: Non-key attributes must not depend on other non-key attributes. Each non-key attribute should depend only on the primary key, ensuring a clearer structure.
+        * **Streamlined Data Integrity**: By eliminating transitive dependencies, we enhance data integrity, meaning that the accuracy and consistency of data are maintained across the database.
+        * **Improved Query Performance**: With well-structured tables that adhere to 3NF, database queries become more efficient, as each table contains relevant and directly related data.
+
+
+
+    **Normalization Table from 1NF to 3NF**
+
+    **Step 1: 1NF (First Normal Form)** 1NF requires that all attributes are atomic (indivisible). Our table already meets this requirement. So, No changes are needed here.
+
+    | Staff\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+    | --------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+    | S1011     | Zara          | P100    | Roiana    | 12-Sep-17 10:00         | S15         |
+    | S1011     | Zara          | P105    | Tiagu     | 12-Sep-17 12:00         | S15         |
+    | S1024     | Aruna         | P108    | Andrew    | 12-Sep-17 10:00         | S10         |
+    | S1024     | Aruna         | P105    | Andrew    | 14-Sep-17 12:00         | S10         |
+    | S1032     | Robin         | P105    | Wong      | 14-Sep-17 10:00         | S15         |
+
+    **Step 2: 2NF (Second Normal Form)** 2NF requires that all non-key attributes are fully functionally dependent on the primary key. In this case, we need to identify partial dependencies.
+
+    To achieve 2NF, we need to create separate tables:
+
+    **Tables in 2NF**
+
+    1. **Dentist\_Info Table**
+       * **Primary Key:** Staff\_No
+         * **Attributes:** Dentist\_Name, Surgery\_No
+
+    | Staff\_No | Dentist\_Name | Surgery\_No |
+    | --------- | ------------- | ----------- |
+    | S1011     | Zara          | S15         |
+    | S1024     | Aruna         | S10         |
+    | S1032     | Robin         | S15         |
+
+    2. **Patient\_Appointments Table**
+       * **Primary Key:** (Pat\_No, Appointment\_Date\_Time) (Composite Key)
+       * **Attributes:** Pat\_Name
+
+    | Pat\_No | Pat\_Name | Appointment\_Date\_Time |
+    | ------- | --------- | ----------------------- |
+    | P100    | Roiana    | 12-Sep-17 10:00         |
+    | P105    | Tiagu     | 12-Sep-17 12:00         |
+    | P108    | Andrew    | 12-Sep-17 10:00         |
+    | P105    | Andrew    | 14-Sep-17 12:00         |
+    | P105    | Wong      | 14-Sep-17 10:00         |
+
+    **Step 3: 3NF (Third Normal Form)** 3NF requires that there are no transitive dependencies, meaning non-key attributes must depend only on the primary key.
+
+    **Tables in 3NF**
+
+    1. **Dentist\_Info Table** (remains the same)
+       * **Primary Key:** Staff\_No
+       * **Attributes:** Dentist\_Name, Surgery\_No
+
+    | Staff\_No | Dentist\_Name | Surgery\_No |
+    | --------- | ------------- | ----------- |
+    | S1011     | Zara          | S15         |
+    | S1024     | Aruna         | S10         |
+    | S1032     | Robin         | S15         |
+
+    2. **Patient\_Appointments Table** (we'll adjust to include Staff\_No)
+       * **Primary Key:** (Pat\_No, Appointment\_Date\_Time) (Composite Key)
+       * **Attributes:** Pat\_Name, Staff\_No (added to link with Dentist)
+
+    | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Staff\_No |
+    | ------- | --------- | ----------------------- | --------- |
+    | P100    | Roiana    | 12-Sep-17 10:00         | S1011     |
+    | P105    | Tiagu     | 12-Sep-17 12:00         | S1011     |
+    | P108    | Andrew    | 12-Sep-17 10:00         | S1024     |
+    | P105    | Andrew    | 14-Sep-17 12:00         | S1024     |
+    | P105    | Wong      | 14-Sep-17 10:00         | S1032     |
+
+    3. **Surgery\_Info Table**
+       * **Primary Key:** Surgery\_No
+       * **Foreign Key:** Staff\_No (references Dentist\_Info)
+       * **Attributes:** Staff\_No
+
+    | Surgery\_No | Staff\_No |
+    | ----------- | --------- |
+    | S15         | S1011     |
+    | S10         | S1024     |
+
+
+
 
 
