@@ -99,6 +99,28 @@
 
 
 
+#### Q.1.d.)
+
+1.  d) Explain the differences of **Data Definition Language (DDL)** and **Data Manipulation Language (DML)**.                                                                                                                                                 **(6 MARKS)**
+
+
+
+    **Answer:-**
+
+    The differences between **Data Definition Language (DDL)** and **Data Manipulation Language (DML) are:**
+
+
+
+    | **Feature**                | **Data Definition Language (DDL)**                                               | **Data Manipulation Language (DML)**                                          |
+    | -------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+    | **1. Definition**          | A set of SQL commands used to create, modify, and delete database structures.    | A set of SQL commands used to manage and modify data within a database.       |
+    | **2. Purpose**             | To define and manage the schema of the database (structure).                     | To manipulate and manage the actual data stored in the database.              |
+    | **3. Examples**            | - **CREATE**: Creates new database objects.                                      | - **INSERT**: Adds new rows of data into a table.                             |
+    |                            | - **ALTER**: Modifies existing database objects.                                 | - **UPDATE**: Modifies existing data within a table.                          |
+    |                            | - **DROP**: Deletes existing database objects.                                   | - **DELETE**: Removes rows from a table based on specified conditions.        |
+    | **4. Transaction Control** | DDL statements are usually auto-committed and cannot be rolled back.             | DML statements can be rolled back or committed, allowing transaction control. |
+    | **5. Usage**               | Typically used by database administrators or applications, not by regular users. | Commonly used by both users and applications to interact with data.           |
+
 
 
 
