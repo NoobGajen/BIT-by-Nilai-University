@@ -77,6 +77,28 @@
        This report focuses on ticket sales, covering total revenue, ticket types (e.g., one-way, round-trip), and payment methods used (cash, card, etc.).
        * **Benefit**: By tracking ticket sales and revenue, SP Bumi can identify which routes are most profitable and adjust pricing or services accordingly. It will also help in financial planning and identifying areas to increase revenue.
 
+#### Q.1.c.)
+
+1.  c.) Describe the **THREE(3)** main characteristics of the database approach and contrast it with the file-based approach.
+
+
+
+    **Answer:-**
+
+    Three main characteristics of the database approach and contrast with the file-based approach:
+
+
+
+    | **Characteristic**         | **Database Approach (DBMS)**                                                                                       | **File-Based Approach**                                                                                           |
+    | -------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+    | **1. Data Centralization** | Data is stored in a centralized system, allowing multiple users and applications to access the same data easily.   | Data is stored in separate files across different locations, making access and management more difficult.         |
+    | **2. Data Integrity**      | Ensures high data integrity with rules and constraints to keep the data accurate and consistent across the system. | Maintaining data accuracy is difficult due to the risk of data duplication and inconsistency between files.       |
+    | **3. Data Independence**   | Physical storage and data access are separate, meaning changes in data structure don’t affect applications.        | File structures are closely tied to applications, so changes can break the way programs access and use the data.  |
+    | **4. Security**            | Offers strong security with built-in access control, user authentication, and data protection features.            | Security is weak and usually relies on each application, making it harder to protect data effectively.            |
+    | **5. Data Redundancy**     | Reduces data duplication because data is stored centrally and managed consistently.                                | High data redundancy due to duplication of data across multiple files, leading to inconsistency and wasted space. |
+
+
+
 
 
 
