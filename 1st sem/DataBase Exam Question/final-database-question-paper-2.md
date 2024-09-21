@@ -133,7 +133,7 @@ Age = Current Date - Birthdate
 
 In this case, **Age** is derived from the **Birthdate** and does not need to be stored directly in the database.
 
-## Question 3 - [Same as Paper - 1 Question no. 3](final-database-question-paper.md#question-3)
+## Question 3 - [Same as Paper - 1 Question no. 3](final-database-question-paper-1.md#question-3)
 
 ## Question 4
 
