@@ -94,7 +94,7 @@ Two-phase locking is a method used to ensure transaction isolation and prevent c
 
 ## **5. Deadlock**
 
-### **Deadlock:**
+### **Deadlock**
 
 A deadlock occurs when two or more transactions are waiting for each other to release resources, but none of them can proceed because they are all holding locks on the resources that the others need. This creates a cycle where none of the transactions can complete.\
 _Example:_ Transaction A locks resource X and waits for resource Y. Meanwhile, Transaction B locks resource Y and waits for resource X. Both transactions are stuck and can’t proceed.
@@ -103,22 +103,22 @@ _Example:_ Transaction A locks resource X and waits for resource Y. Meanwhile, T
 
 ## **6. Database Security, Authentication, and Authorization**
 
-### **Database Security:**
+### **Database Security**
 
-1. **Authentication**:\
+1. **Authentication**\
    Ensures that only authorized users can access the database by verifying their identity using credentials like usernames and passwords.
-2. **Authorization**:\
+2. **Authorization**\
    Controls what actions authenticated users can perform within the database (e.g., view, edit, or delete records) based on their assigned permissions.
-3. **Encryption**:\
+3. **Encryption**\
    Protects sensitive data by converting it into an unreadable format using encryption algorithms, ensuring data is secure both at rest (stored) and in transit.
-4. **Database Auditing**:\
+4. **Database Auditing**\
    Tracks and records database activities such as user access, data changes, and actions performed. This helps identify unauthorized access or suspicious behavior.
-5. **Backup and Recovery**:\
+5. **Backup and Recovery**\
    Regular backups and recovery procedures ensure data can be restored in case of corruption, hacking, or system failures, maintaining database integrity and availability.
 
-### **Database Integrity Constraints:**
+### **Database Integrity Constraints**
 
-Consider adding a section on **Integrity Constraints** to cover rules that ensure data correctness and validity:
+Consider adding a section on **Integrity Constraints** to cover rules that ensure data correctness and validity
 
 * **Primary Key Constraint:** Ensures that each record is unique.
 * **Foreign Key Constraint:** Ensures referential integrity between tables.
@@ -126,7 +126,7 @@ Consider adding a section on **Integrity Constraints** to cover rules that ensur
 * **Check Constraint:** Ensures that the value in a column meets a specific condition.
 * **Not Null Constraint:** Ensures that a column cannot have a null value.
 
-### **Authentication and Authorization:**
+### **Authentication and Authorization**
 
 * **Authentication:** This is the process of verifying a user’s identity, usually through a username and password.\
   _Example:_ Logging into a system with your credentials.
@@ -137,7 +137,7 @@ Consider adding a section on **Integrity Constraints** to cover rules that ensur
 
 ## **7. Application-Level Security**
 
-### **Application-Level Security:**
+### **Application-Level Security**
 
 This refers to security measures applied at the application level, which controls access to the database through the application itself. It involves assigning roles, permissions, and access controls within the application, ensuring that users can only interact with data they are allowed to access.\
 _Example:_ In an e-commerce system, only the sales team might have permission to update product prices, while customers can only view them.
@@ -146,13 +146,15 @@ _Example:_ In an e-commerce system, only the sales team might have permission to
 
 ## **8. Database Backup and Recovery**
 
-### **Database Backup and Recovery:**
+### **Database Backup and Recovery**
 
 Backup and recovery are critical processes to ensure that the database can be restored in case of system failure, data corruption, or accidental deletion.
 
-* **Backup:** A backup is a copy of the database or specific data that is stored separately to allow for recovery in case of failure.\
-  _Example:_ A daily backup of all customer orders to ensure that no orders are lost if the system crashes.
-* **Recovery:**\
+*   **Backup**&#x20;
+
+    A backup is a copy of the database or specific data that is stored separately to allow for recovery in case of failure.\
+    _Example:_ A daily backup of all customer orders to ensure that no orders are lost if the system crashes.
+* **Recovery**\
   Recovery is the process of restoring the database to its correct state after a failure. This can involve using backups and transaction logs to bring the database back to the most recent consistent state.
   * **Rollback:** This undoes changes made by a transaction that hasn’t been committed.\
     _Example:_ If a user tries to update a record but decides to cancel, the rollback will undo the changes.
