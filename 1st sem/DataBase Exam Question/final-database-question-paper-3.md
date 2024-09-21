@@ -369,7 +369,20 @@ CREATE TABLE Patron (
 );
 ```
 
+### b.) Insert the following data into the table using SQL
 
+| Patron ID | Patron Name | Patron Contact Number |
+| --------- | ----------- | --------------------- |
+| 45660     | Damien Tan  | 0123456789            |
+
+#### Answer:-
+
+To insert the specified data into the `Patron` table, we will use the following SQL query:
+
+```sql
+INSERT INTO Patron (PatronID, PatronName, PatronContactNumber) 
+VALUES (45660, 'Damien Tan', '0123456789');
+```
 
 
 
