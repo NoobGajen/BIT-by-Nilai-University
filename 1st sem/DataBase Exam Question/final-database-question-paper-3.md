@@ -375,8 +375,6 @@ CREATE TABLE Patron (
 | --------- | ----------- | --------------------- |
 | 45660     | Damien Tan  | 0123456789            |
 
-#### Answer:-
-
 To insert the specified data into the `Patron` table, we will use the following SQL query:
 
 ```sql
@@ -384,7 +382,38 @@ INSERT INTO Patron (PatronID, PatronName, PatronContactNumber)
 VALUES (45660, 'Damien Tan', '0123456789');
 ```
 
+### c.) Assume the participant table has the following data.
 
+| Patron ID | Patron Name | Patron Contact Number |
+| --------- | ----------- | --------------------- |
+| 45660     | Damien Tan  | 0123456789            |
+| 21089     | Larry Smith | 0124463840            |
+| 19876     | Sarah Tan   | 0127896789            |
+| 75832     | Sandra Chow | 0128787878            |
+
+#### **i.) Create an SQL query to display only the Patron Name and the Patron Contact Number.**
+
+```sql
+SELECT PatronName, PatronContactNumber FROM Patron;
+```
+
+#### **ii.) Create an SQL query to display the Patron Name and the Patron Contact Number where the Patron ID is 45660..**
+
+```sql
+SELECT PatronName, PatronContactNumber FROM Patron WHERE PatronID = 45660;
+```
+
+#### **iii.) Create an SQL query to display the Patron ID, Patron Name, and Patron Contact Number for all participants with the last name Tan.**
+
+```sql
+SELECT PatronID, PatronName, PatronContactNumber FROM Patron WHERE PatronName LIKE '%Tan';
+```
+
+#### **iv.) Create an SQL query to display the Patron Name, where the Patron ID is either 19876 or 21089.**
+
+```sql
+SELECT PatronName FROM Patron WHERE PatronID IN (19876, 21089);
+```
 
 
 
