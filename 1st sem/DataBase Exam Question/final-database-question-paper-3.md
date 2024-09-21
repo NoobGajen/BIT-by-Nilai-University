@@ -100,7 +100,7 @@ As Clean Carpet expands, a DBMS can easily accommodate growing data needs withou
 * The schema is usually fixed and doesn’t change unless modified by a database administrator.
 * It acts as a blueprint for how data is stored and helps ensure that the data is organized correctly.
 
-<figure><img src=".gitbook/assets/Diagram of a database schema.png" alt=""><figcaption><p>Diagram of a database schema</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Diagram of a database schema</p></figcaption></figure>
 
 **Database State**:
 
@@ -109,7 +109,7 @@ As Clean Carpet expands, a DBMS can easily accommodate growing data needs withou
 * It reflects the current content of the database and can be queried to retrieve real information.
 * Each time we make changes, we affect the database state, which is essential for accurate data management.
 
-<figure><img src=".gitbook/assets/Diagram of a database state.png" alt=""><figcaption><p>Diagram of a database state</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>Diagram of a database state</p></figcaption></figure>
 
 ## QUESTION 2&#x20;
 
