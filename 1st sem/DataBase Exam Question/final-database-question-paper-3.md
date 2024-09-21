@@ -200,14 +200,16 @@ The Tablet below is provided as a reference for the following questions.
 
 ### a.) Apply first normalization form (I NF) to Table 1.
 
+#### Answer:-
+
 **Original Unnormalized Table (UNF)**
 
-| CustomerName | HouseAddress     | Contact      | Item        | Price | Seller  | Extension |
-| ------------ | ---------------- | ------------ | ----------- | ----- | ------- | --------- |
-| Britney      | 15 Lilly Dr.     | 012 555 5555 | La Liberta  | $36   | Brandon | 0121      |
-| Justin       | 191 Madison St.  | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
-| Justin       | 201 Florida Ave. | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
-| Nick         | 201 Florida Ave. | 019 777 7777 | La Liberta  | $36   | Brandon | 0121      |
+| CustomerName  | HouseAddress     | Contact      | Item                | Price | Seller  | Extension |
+| ------------- | ---------------- | ------------ | ------------------- | ----- | ------- | --------- |
+| Britney House | 15 Lilly Dr.     | 012 555 5555 | La Liberta Luggage  | $36   | Brandon | 0121      |
+| Justin Dear   | 191 Madison St.  | 016 333 3333 | Case Valker Luggage | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $36   | Brandon | 0121      |
 
 **Applying First Normal Form (1NF)**
 
@@ -220,10 +222,166 @@ The Tablet below is provided as a reference for the following questions.
 
 The table is already in 1NF and remains unchanged:
 
-| CustomerName | HouseAddress     | Contact      | Item        | Price | Seller  | Extension |
-| ------------ | ---------------- | ------------ | ----------- | ----- | ------- | --------- |
-| Britney      | 15 Lilly Dr.     | 012 555 5555 | La Liberta  | $36   | Brandon | 0121      |
-| Justin       | 191 Madison St.  | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
-| Justin       | 201 Florida Ave. | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
-| Nick         | 201 Florida Ave. | 019 777 7777 | La Liberta  | $36   | Brandon | 0121      |
+| CustomerName  | HouseAddress     | Contact      | Item                | Price | Seller  | Extension |
+| ------------- | ---------------- | ------------ | ------------------- | ----- | ------- | --------- |
+| Britney House | 15 Lilly Dr.     | 012 555 5555 | La Liberta Luggage  | $36   | Brandon | 0121      |
+| Justin Dear   | 191 Madison St.  | 016 333 3333 | Case Valker Luggage | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $36   | Brandon | 0121      |
+
+### b.) Apply the second normalization form (2NF) to your answer for Question 3a. Treat this question as an independent separate question, and provide the full answer. Construct all/full table(s), regardless whether there is no change to the table(s) from your answer for Question 3a.
+
+#### Answer:-
+
+To achieve Second Normal Form (2NF), we need to ensure that the table is already in First Normal Form (1NF) and that all non-key attributes are fully functionally dependent on the primary key. This means there should be no partial dependencies of any column on a composite primary key.
+
+**Original Table in 1NF**
+
+| CustomerName  | HouseAddress     | Contact      | Item                | Price | Seller  | Extension |
+| ------------- | ---------------- | ------------ | ------------------- | ----- | ------- | --------- |
+| Britney House | 15 Lilly Dr.     | 012 555 5555 | La Liberta Luggage  | $36   | Brandon | 0121      |
+| Justin Dear   | 191 Madison St.  | 016 333 3333 | Case Valker Luggage | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $58   | Molly   | 0122      |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 | La Liberta Luggage  | $36   | Brandon | 0121      |
+
+**Step 1: Identify the Primary Key**
+
+In this scenario, the primary key could be a combination of `CustomerName`, `Item`, and `Seller` since these together uniquely identify each record. However, to simplify, we can use a unique `OrderID` for each entry.
+
+**Step 2: Identify Partial Dependencies**
+
+1. **Non-key attributes**:
+   * `HouseAddress`, `Contact`, and `Extension` depend only on `CustomerName`.
+   * `Price` depends on `Item` and `Seller`.
+
+**Step 3: Decompose the Table into 2NF**
+
+We will create separate tables to eliminate partial dependencies:
+
+1. **Customer Table** (Stores customer details)
+   * **Primary Key**: CustomerName
+   * **Attributes**: HouseAddress, Contact, Extension
+2. **Item Table** (Stores item details)
+   * **Primary Key**: Item (can be the name itself)
+   * **Attributes**: Price, Seller
+3. **Order Table** (Stores order details)
+   * **Primary Key**: OrderID (new unique identifier)
+   * **Attributes**: CustomerName (Foreign Key), Item (Foreign Key)
+
+**Resulting Tables in 2NF**
+
+**1. Customer Table**
+
+| CustomerName  | Address          | Contact      |
+| ------------- | ---------------- | ------------ |
+| Britney House | 15 Lilly Dr.     | 012 555 5555 |
+| Justin Dear   | 191 Madison St.  | 016 333 3333 |
+| Nick Hammer   | 201 Florida Ave. | 019 777 7777 |
+
+**2. Order Table**
+
+| CustomerName  | Item                | Price | Seller  | Extension |
+| ------------- | ------------------- | ----- | ------- | --------- |
+| Britney House | La Liberta Luggage  | $36   | Brandon | 0121      |
+| Justin Dear   | Case Valker Luggage | $58   | Molly   | 0122      |
+| Nick Hammer   | La Liberta Luggage  | $58   | Molly   | 0122      |
+| Nick Hammer   | La Liberta Luggage  | $36   | Brandon | 0121      |
+
+### c.) Apply the third normalization form (3NF) to your answer for Question 3b. Treat this question as an Independent separate question, and provide the full answer. Construct all/full table(s), regardless whether there is no change to the table(s) from your answer for Question 3b.
+
+#### Answer:-
+
+To achieve Third Normal Form (3NF), we must ensure that:
+
+1. The table is already in Second Normal Form (2NF).
+2. There are no transitive dependencies, meaning non-key attributes do not depend on other non-key attributes.
+
+#### Step 1: Identify Transitive Dependencies
+
+In the current tables:
+
+* The **Customers** table has no transitive dependencies; all attributes are directly related to the primary key (`CustomerName`).
+* The **Items** table also has no transitive dependencies; all attributes are directly tied to the primary key (`Item`).
+* The **Sellers** table has attributes that are solely dependent on the `SellerID`, and the **Orders** table only holds foreign keys that relate to the primary keys of the other tables.
+
+#### Step 2: Decompose Tables to Remove Transitive Dependencies
+
+1.  **Customers Table**: This table remains unchanged as it is already in 3NF.
+
+
+
+    | CustomerName  | Address          | Contact      |
+    | ------------- | ---------------- | ------------ |
+    | Britney House | 15 Lilly Dr.     | 012 555 5555 |
+    | Justin Dear   | 191 Madison St.  | 016 333 3333 |
+    | Nick Hammer   | 201 Florida Ave. | 019 777 7777 |
+2.  **Items Table**: We will modify this table to include a `SellerID`, creating a foreign key relationship.
+
+
+
+    | Item                | Price | SellerID |
+    | ------------------- | ----- | -------- |
+    | La Liberta Luggage  | $36   | 1        |
+    | Case Valker Luggage | $58   | 2        |
+3.  **Sellers Table**: This new table will store seller details and maintain the `SellerID` as the primary key.
+
+    | SellerID | Seller  | Extension |
+    | -------- | ------- | --------- |
+    | 1        | Brandon | 0121      |
+    | 2        | Molly   | 0122      |
+4.  **Orders Table**: This table remains unchanged, now using `SellerID` as a reference to the seller and holding a foreign key for the `CustomerName`.
+
+    | OrderID | CustomerName  | Item                |
+    | ------- | ------------- | ------------------- |
+    | 1       | Britney House | La Liberta Luggage  |
+    | 2       | Justin Dear   | Case Valker Luggage |
+    | 3       | Nick Hammer   | La Liberta Luggage  |
+    | 4       | Nick Hammer   | La Liberta Luggage  |
+
+#### Resulting Tables in 3NF
+
+* **Customers Table**: No changes, already in 3NF.
+* **Items Table**: Updated to include `SellerID`.
+* **Sellers Table**: Newly created to maintain seller information, eliminating any transitive dependencies.
+* **Orders Table**: No changes, maintains integrity with foreign keys.
+
+## QUESTION 4
+
+The Table 2 below is provided as a reference for the following questions. Answers are expected to be in Structured Query Language (SQL).
+
+**Table 2: Student Table Definition**
+
+| Field Name            | Data Type                 | Primary Key |
+| --------------------- | ------------------------- | ----------- |
+| Patron ID             | Number                    | Yes         |
+| Patron Name           | Text - 255 characters max | No          |
+| Patron Contact Number | Text - 10 characters max  | No          |
+
+### a.) Construct a patron table using SQL with the appropriate field names and properties.
+
+To create the `Patron` table using SQL, we will define the field names, data types, and primary key as specified in the table definition. Here’s the SQL query:
+
+```sql
+CREATE TABLE Patron (
+    PatronID INT PRIMARY KEY,
+    PatronName VARCHAR(255),
+    PatronContactNumber VARCHAR(10)
+);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
