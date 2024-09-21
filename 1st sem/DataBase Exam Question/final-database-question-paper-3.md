@@ -58,3 +58,35 @@ Databases can model complex interconnections between different data entities thr
   * **Flexibility**: Databases can easily adapt to changing business requirements by modifying relationships without significant restructuring, allowing for more dynamic data management.
 
 ### c.) Clean Carpet is opening the 3' branch, and has come to you for consultation. Upon the investigation, you found that Clean Carpet Is keeping track of their sales and service records manually by multiple staffs in each branch, which potentially lead to errors in their records. Would you recommend Clean Carpet to use database management system? Discuss THREE (3) reasons.
+
+I would recommend that Clean Carpet adopt a Database Management System (DBMS) for the following reasons:
+
+#### **1. Improved Data Accuracy**
+
+A DBMS minimizes human error by automating data entry and validation processes.
+
+* **Benefit**: This leads to more accurate sales and service records, reducing discrepancies that can occur with manual tracking.
+
+#### **2. Centralized Data Management**
+
+A DBMS provides a single platform for storing and managing data from all branches.
+
+* **Benefit**: This centralization allows for easier access, updates, and management of information, ensuring that all staff have access to the same, up-to-date records.
+
+#### **3. Enhanced Reporting and Analytics**
+
+A DBMS can generate reports and perform complex queries to analyze sales and service data.
+
+* **Benefit**: Clean Carpet can gain insights into sales trends, customer preferences, and service performance, which can inform business decisions and strategies.
+
+#### **4. Data Security and Access Control**
+
+A DBMS includes features for securing sensitive data and controlling user access.
+
+* **Benefit**: This ensures that only authorized personnel can view or modify records, protecting confidential customer information and sales data.
+
+#### **5. Scalability and Flexibility**
+
+As Clean Carpet expands, a DBMS can easily accommodate growing data needs without a significant redesign.
+
+* **Benefit**: This scalability allows the business to adapt to increased transaction volumes and new service offerings without compromising performance or requiring a complete overhaul of the data management system.
