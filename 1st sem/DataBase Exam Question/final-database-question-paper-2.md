@@ -100,7 +100,43 @@ Based on the given scenario, here is the ER diagram:
 
 <figure><img src=".gitbook/assets/Final database question paper 2 Question 2.a.1.png" alt=""><figcaption><p>ER diagram by using Crow's Foot Notation</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Final database question paper 2 Question 2.a.2.png" alt=""><figcaption><p>ER diagram by using Chen Notation</p></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+place holder for chen notation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
