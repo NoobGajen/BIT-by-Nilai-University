@@ -93,3 +93,27 @@ As Clean Carpet expands, a DBMS can easily accommodate growing data needs withou
 
 ### d.) Contrast between database schema and database state, with a diagram for each.
 
+**Database Schema**:
+
+* A database schema is the structure of a database, like a map.
+* It defines how tables are organized, what columns (attributes) each table has, the data types (like numbers or text), and the relationships between tables.
+* The schema is usually fixed and doesn’t change unless modified by a database administrator.
+* It acts as a blueprint for how data is stored and helps ensure that the data is organized correctly.
+
+<figure><img src=".gitbook/assets/Diagram of a database schema.png" alt=""><figcaption><p>Diagram of a database schema</p></figcaption></figure>
+
+**Database State**:
+
+* A database state is the actual data that exists in the database at any given time.
+* This state changes when data is added, updated, or deleted.
+* It reflects the current content of the database and can be queried to retrieve real information.
+* Each time we make changes, we affect the database state, which is essential for accurate data management.
+
+<figure><img src=".gitbook/assets/Diagram of a database state.png" alt=""><figcaption><p>Diagram of a database state</p></figcaption></figure>
+
+## QUESTION 2&#x20;
+
+### a.) Explain the following diagram.
+
+<figure><img src=".gitbook/assets/Final database question paper 3 Question 2.a.png" alt=""><figcaption></figcaption></figure>
+
