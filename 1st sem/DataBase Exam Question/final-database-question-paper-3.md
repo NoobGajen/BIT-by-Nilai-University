@@ -117,3 +117,113 @@ As Clean Carpet expands, a DBMS can easily accommodate growing data needs withou
 
 <figure><img src=".gitbook/assets/Final database question paper 3 Question 2.a.png" alt=""><figcaption></figcaption></figure>
 
+#### Answer:-
+
+**1. Emergency Contact (One to Many) – Provides – (One) Participant**
+
+* An emergency contact can be linked to one to many participants.
+* Each participant must have exactly one emergency contact.
+
+**2. Participant (Zero, One, or Many) – Accommodates – (One) Cabin**
+
+* A participant can stay in zero, one, or many cabins.
+* Each cabin must have at least one participant.
+
+**3. Cabin (One to Many) – In Charge of – (One) Cabin Host**
+
+* Each cabin can have one to many cabin hosts.
+* Each cabin host is responsible for one cabin.
+
+**4. Participant (One to Many) – Follows – (One to Many) Instructor**
+
+* A participant can follow one to many instructors.
+* An instructor can guide one to many participants.
+
+**5. Instructor (One) – Guides – (One to Many) Activities**
+
+* An instructor can guide one to many activities.
+* Each activity must have at least one instructor.
+
+### b) Draw an entity relationship diagram for the following statement, complete with the entities, key attributes with the primary keys underlined, relationships, and cardinalities.&#x20;
+
+In order to make a dinner reservation at the Aurore's (a well-known restaurant), a customer Is required to at least provide his/her name. The customer may reserve one or more tables, depending on the number of party. The customer may order one or more of the same or different meals.
+
+#### Answer:-
+
+#### Entities and Key Attributes
+
+1. **Customer**
+   * **CustomerID** (Primary Key)
+   * Name
+2. **Table**
+   * **TableID** (Primary Key)
+   * Number (Table number)
+3. **Reservation**
+   * **ReservationID** (Primary Key)
+   * CustomerID (Foreign Key)
+   * TableID (Foreign Key)
+   * PartySize
+   * ReservationDate
+4. **Meal**
+   * **MealID** (Primary Key)
+   * Name
+   * Price
+5. **CustomerMeal** (Junction Table for Many-to-Many relationship)
+   * **CustomerMealID** (Primary Key)
+   * CustomerID (Foreign Key)
+   * MealID (Foreign Key)
+
+#### Relationships and Cardinalities
+
+1. **Customer - Reservation**: One-to-Many
+   * A customer can make multiple reservations (1 to Many).
+   * A reservation is made by one customer (Many to 1).
+2. **Reservation - Table**: Many-to-One
+   * A reservation can include one table (Many to 1).
+   * A table can be associated with multiple reservations (1 to Many).
+3. **Customer - Meal**: Many-to-Many
+   * A customer can order multiple meals (Many to Many).
+   * A meal can be ordered by multiple customers (Many to Many).
+
+<figure><img src=".gitbook/assets/Final database question paper 3 Question 2.b.png" alt=""><figcaption><p>ER diagram by using Crow's Foot Notation</p></figcaption></figure>
+
+## QUESTION 3
+
+The Tablet below is provided as a reference for the following questions.
+
+| CustomerName | HouseAddress     | Contact      | Item        | Price | Seller  | Extension |
+| ------------ | ---------------- | ------------ | ----------- | ----- | ------- | --------- |
+| Britney      | 15 Lilly Dr.     | 012 555 5555 | La Liberta  | $36   | Brandon | 0121      |
+| Justin       | 191 Madison St.  | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Justin       | 201 Florida Ave. | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Nick         | 201 Florida Ave. | 019 777 7777 | La Liberta  | $36   | Brandon | 0121      |
+
+### a.) Apply first normalization form (I NF) to Table 1.
+
+**Original Unnormalized Table (UNF)**
+
+| CustomerName | HouseAddress     | Contact      | Item        | Price | Seller  | Extension |
+| ------------ | ---------------- | ------------ | ----------- | ----- | ------- | --------- |
+| Britney      | 15 Lilly Dr.     | 012 555 5555 | La Liberta  | $36   | Brandon | 0121      |
+| Justin       | 191 Madison St.  | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Justin       | 201 Florida Ave. | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Nick         | 201 Florida Ave. | 019 777 7777 | La Liberta  | $36   | Brandon | 0121      |
+
+**Applying First Normal Form (1NF)**
+
+1. **Atomic Values**: Each field contains only one value, with no repeating groups.
+2. **Uniform Data Types**: Each column has values of the same type.
+3. **Unique Attribute Names**: Each column has a unique name.
+4. **No Duplicates**: While there are repeated customer entries, they represent different items.
+
+**Resulting Table in 1NF**
+
+The table is already in 1NF and remains unchanged:
+
+| CustomerName | HouseAddress     | Contact      | Item        | Price | Seller  | Extension |
+| ------------ | ---------------- | ------------ | ----------- | ----- | ------- | --------- |
+| Britney      | 15 Lilly Dr.     | 012 555 5555 | La Liberta  | $36   | Brandon | 0121      |
+| Justin       | 191 Madison St.  | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Justin       | 201 Florida Ave. | 016 333 3333 | Case Valker | $58   | Molly   | 0122      |
+| Nick         | 201 Florida Ave. | 019 777 7777 | La Liberta  | $36   | Brandon | 0121      |
+
