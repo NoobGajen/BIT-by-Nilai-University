@@ -91,3 +91,5 @@ As Clean Carpet expands, a DBMS can easily accommodate growing data needs withou
 
 * **Benefit**: This scalability allows the business to adapt to increased transaction volumes and new service offerings without compromising performance or requiring a complete overhaul of the data management system.
 
+### d.) Contrast between database schema and database state, with a diagram for each.
+
