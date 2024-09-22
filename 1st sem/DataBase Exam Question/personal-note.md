@@ -1,6 +1,6 @@
 # Personal Note
 
-### **Database Approach (DBMS)** vs **File-Based Approach** (Ordered by Importance)
+## **Database Approach (DBMS)** vs **File-Based Approach** (Ordered by Importance)
 
 1. **Data Integrity**
    * **DBMS**: Ensures high data integrity with rules and constraints to keep the data accurate and consistent across the system.
@@ -18,7 +18,7 @@
    * **DBMS**: Data is stored in a centralized system, allowing multiple users and applications to access the same data easily.
    * **File-Based**: Data is stored in separate files across different locations, making access and management more difficult.
 
-### Database Administrator (DBA) vs Data Administrator (DA)
+## Database Administrator (DBA) vs Data Administrator (DA)
 
 #### Database Administrator (DBA)
 
@@ -44,7 +44,7 @@ Some functions of a Data Administrator are:
 * **Data Lifecycle Management**: Overseeing the entire lifecycle of data, from creation and storage to archiving and deletion, ensuring that data is managed in compliance with legal and organizational requirements.
 * **Ensuring Data Consistency**: Implementing strategies to prevent data duplication or inconsistency across different systems, ensuring that all data used by the organization is up-to-date and reliable.
 
-### [**Explain Different Roles in DBMS.**](semi-question-paper-3.md#id-3.-explain-different-roles-in-dbms)
+## [**Explain Different Roles in DBMS.**](semi-question-paper-3.md#id-3.-explain-different-roles-in-dbms)
 
 1. **Data Administrator (DA).**
    * The person who is responsible for the overall management and strategic use of data of an organization, ensuring its quality, consistency, and accessibility across the entire organization.
@@ -65,7 +65,7 @@ Some functions of a Data Administrator are:
    * The individuals or groups who interact with the database through applications or interfaces to perform their job functions or access information.
    * They perform tasks such as data entry, data retrieval, updates, and providing feedback.
 
-### Data Anomalies
+## Data Anomalies
 
 **Example Table: Student\_Course\_Instructor**
 
