@@ -127,67 +127,60 @@ Read the above description carefully. State appropriate assumptions and devise t
 
 **Answer:**&#x20;
 
-#### Example Table: Student\_Course\_Instructor
+#### Example Table: Dentist\_Appointments
 
-| Student\_ID | Student\_Name | Course\_ID | Course\_Name    | Instructor\_ID | Instructor\_Name |
-| ----------- | ------------- | ---------- | --------------- | -------------- | ---------------- |
-| 1           | Gajendra      | C101       | Math            | 10             | Rupesh Bhandari  |
-| 2           | Diwash        | C101       | Networking      | 10             | Rupesh Bhandari  |
-| 3           | Sandesh       | C102       | Science         | 11             | Kreepa Sharma    |
-| 4           | Gajendra      | C103       | IT Fundamentals | 12             | Kreepa Sharma    |
-| 5           | Diwash        | C104       | Database        | 13             | Rupesh Bhandari  |
-| 6           | Sandesh       | C105       | Public Speaking | 14             | Bijay Gautam     |
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1011        | Zara          | P100    | Aruna     | 12-Jan-17 10:00         | 515         |
+| 1011        | Zara          | P105    | Roziana   | 12-Jan-17 12:00         | 515         |
+| 1024        | Robin         | P108    | Andrew    | 14-Jan-17 12:00         | 510         |
+| 1032        | Wong          | P105    | Aruna     | 12-Jan-17 10:00         | 515         |
+| 1032        | Wong          | P108    | Tiagu     | 14-Jan-17 10:00         | 515         |
 
 #### 1. Insertion Anomaly
 
 An insertion anomaly occurs when we cannot add new data without including unrelated information.
 
-**Example**: Suppose **Bijay Gautam** is hired to teach a new course called **Advanced Public Speaking**. If no students are enrolled in this course yet, we cannot add Bijay to the table without also needing to add a student record, which is unnecessary at that time.
+**Example**: Suppose a new dentist, **Bijay**, is hired. If no patients are scheduled for him yet, we cannot add Bijay to the table without also needing to add a patient record, which isn’t necessary at that time.
 
 **Illustration**:
 
-* To add **Bijay Gautam** as an instructor for **C106** (Advanced Public Speaking), we would have to create an entry like this:
+* To add **Bijay** for a new appointment, we would have to create an entry like this:
 
-| Student\_ID | Student\_Name | Course\_ID | Course\_Name             | Instructor\_ID | Instructor\_Name |
-| ----------- | ------------- | ---------- | ------------------------ | -------------- | ---------------- |
-| NULL        | NULL          | C106       | Advanced Public Speaking | 15             | Bijay Gautam     |
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1040        | Bijay         | NULL    | NULL      | 15-Jan-17 09:00         | 520         |
 
 #### 2. Deletion Anomaly
 
 A deletion anomaly occurs when removing one piece of data also removes other important information.
 
-**Example**: If we delete the record for **Gajendra** because he drops **Math**, we also lose information about the **Math** instructor, **Rupesh Bhandari**.
+**Example**: If we delete the record for **Andrew** because he cancels his appointment, we also lose information about his dentist, **Robin**, and his surgery number, even though other patients are still seeing the same dentist.
 
 **Illustration**:
 
-* If we delete Gajendra’s record, this row will be removed:
+* If we delete Andrew’s record, this row will be removed:
 
-| Student\_ID | Student\_Name | Course\_ID | Course\_Name | Instructor\_ID | Instructor\_Name |
-| ----------- | ------------- | ---------- | ------------ | -------------- | ---------------- |
-| 1           | Gajendra      | C101       | Math         | 10             | Rupesh Bhandari  |
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1024        | Robin         | P108    | Andrew    | 14-Jan-17 12:00         | 510         |
 
-* Since Rupesh is the only instructor listed for Math, we would lose this information completely.
+* Since Robin is the only dentist listed for Andrew, we would lose this important information.
 
 #### 3. Update Anomaly
 
 An update anomaly happens when we need to change information in multiple places, and if we miss one, it can create confusion.
 
-**Example**: If **Rupesh Bhandari** decides to change his title to **Dr. Rupesh Bhandari**, we need to update this in every record where he is listed. If we forget to update it in some places, it can lead to inconsistencies.
+**Example**: If **Zara** decides to change her title to **Dr. Zara**, we need to update this in every record where she is listed. If we forget to update it in some places, it can lead to inconsistencies.
 
 **Illustration**:
 
-* If we change Rupesh’s title in one record but forget to change it in another, the table could look like this:
+* If we change Zara’s title in one record but forget to change it in another, the table could look like this:
 
-| Student\_ID | Student\_Name | Course\_ID | Course\_Name | Instructor\_ID | Instructor\_Name    |
-| ----------- | ------------- | ---------- | ------------ | -------------- | ------------------- |
-| 1           | Gajendra      | C101       | Math         | 10             | Dr. Rupesh Bhandari |
-| 2           | Diwash        | C101       | Networking   | 10             | Rupesh Bhandari     |
-
-#### Summary
-
-* **Insertion Anomaly**: We struggle to add new instructors without needing unrelated student data (e.g., adding Bijay for a course without students).
-* **Deletion Anomaly**: Removing one student can also remove important instructor information (e.g., deleting Gajendra removes Rupesh’s info).
-* **Update Anomaly**: If we need to change a title in multiple places but forget some, we create inconsistencies (e.g., different titles for Rupesh).
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1011        | Dr. Zara      | P100    | Aruna     | 12-Jan-17 10:00         | 515         |
+| 1011        | Zara          | P105    | Roziana   | 12-Jan-17 12:00         | 515         |
 
 ### **4.B) Discuss the purpose of the following database normalization levels:**
 
