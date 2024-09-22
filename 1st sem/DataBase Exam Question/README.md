@@ -1,4 +1,4 @@
-# Question Paper - 1
+# Semi - Question Paper - 1
 
 ## Question 1
 
@@ -123,9 +123,54 @@ Read the above description carefully. State appropriate assumptions and devise t
 | 1032        | Wong          | P105    | Aruna     | 12-Jan-17 10:00         | 515         |
 | 1032        | Wong          | P108    | Tiagu     | 14-Jan-17 10:00         | 515         |
 
-#### 4.A) Explain THREE (3) types of anomalies that exist in Table 1 with examples.
+### 4.A) Explain THREE (3) types of anomalies that exist in Table 1 with examples.
 
-**Answer:** (padhako xaina 💀💀)
+**Answer:**&#x20;
+
+#### 1. Insertion Anomaly
+
+An insertion anomaly occurs when we cannot add new data without including unrelated information.
+
+**Example**: Suppose a new dentist, **Bijay**, is hired. If no patients are scheduled for him yet, we cannot add Bijay to the table without also needing to add a patient record, which isn’t necessary at that time.
+
+**Illustration**:
+
+* To add **Bijay** for a new appointment, we would have to create an entry like this:
+
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1040        | Bijay         | NULL    | NULL      | 15-Jan-17 09:00         | 520         |
+
+#### 2. Deletion Anomaly
+
+A deletion anomaly occurs when removing one piece of data also removes other important information.
+
+**Example**: If we delete the record for **Andrew** because he cancels his appointment, we also lose information about his dentist, **Robin**, and his surgery number, even though other patients are still seeing the same dentist.
+
+**Illustration**:
+
+* If we delete Andrew’s record, this row will be removed:
+
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1024        | Robin         | P108    | Andrew    | 14-Jan-17 12:00         | 510         |
+
+* Since Robin is the only dentist listed for Andrew, we would lose this important information.
+
+#### 3. Update Anomaly
+
+An update anomaly happens when we need to change information in multiple places, and if we miss one, it can create confusion.
+
+**Example**: If **Zara** decides to change her title to **Dr. Zara**, we need to update this in every record where she is listed. If we forget to update it in some places, it can lead to inconsistencies.
+
+**Illustration**:
+
+* If we change Zara’s title in one record but forget to change it in another, the table could look like this:
+
+| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
+| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
+| 1011        | Dr. Zara      | P100    | Aruna     | 12-Jan-17 10:00         | 515         |
+| 1011        | Zara          | P105    | Roziana   | 12-Jan-17 12:00         | 515         |
 
 ### **4.B) Discuss the purpose of the following database normalization levels:**
 
