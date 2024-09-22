@@ -34,7 +34,7 @@ Some functions of a Database Administrator are:
 
 #### Data Administrator (DA)
 
-The person responsible for managing data governance, policies, data quality, and ensuring that data is properly maintained and used within an organization is known as a **Data Administrator (DA)**.
+The person who is responsible for the overall management and strategic use of data of an organization, ensuring its quality, consistency, and accessibility across the entire organization is known as a **Data Administrator (DA)**.
 
 Some functions of a Data Administrator are:
 
