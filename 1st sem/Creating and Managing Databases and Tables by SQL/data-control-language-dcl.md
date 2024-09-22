@@ -46,7 +46,7 @@ GRANT ALL PRIVILEGES ON database_name.* TO 'gajen'@'localhost';
 GRANT privilege1, privilege2, ... ON database_name.* TO 'username'@'hostname' WITH GRANT OPTION;
 ```
 
-### [Common Privileges: ](https://dev.mysql.com/doc/refman/8.4/en/privileges-provided.html)
+### [Common Privileges:  ](https://dev.mysql.com/doc/refman/8.4/en/privileges-provided.html)
 
 1. **ALL PRIVILEGES**: Grants all available privileges.
 2. **SELECT**: Allows reading data from a table.
@@ -68,6 +68,8 @@ GRANT privilege1, privilege2, ... ON database_name.* TO 'username'@'hostname' WI
 18. **GRANT OPTION**: Allows the user to grant or revoke privileges to other users.
 19. **LOCK TABLES**: Allows locking tables for read or write operations.
 20. **RELOAD**: Allows reloading the grant tables and flushing logs.
+
+For a complete list of privileges and their descriptions, please refer to the official MySQL documentation: [MySQL Privileges](https://dev.mysql.com/doc/refman/9.0/en/privileges-provided.html#privileges-provided-summary).
 
 #### Example
 
