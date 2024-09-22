@@ -78,7 +78,7 @@ GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES ON sakila.
 * **Command:** Grants all privileges on a specific database.
 * **User:** `gajen`
 * **Hostname:** `localhost`
-* **Privileges:** CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD
+* **Privileges:** CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES
 * **Grant Option:** Allows `gajen` to grant these privileges to other users.
 
 ## Granting All Privileges
