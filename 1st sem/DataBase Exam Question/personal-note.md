@@ -128,3 +128,5 @@ An update anomaly happens when we need to change information in multiple places,
 * **Insertion Anomaly**: We struggle to add new instructors without needing unrelated student data (e.g., adding Bijay for a course without students).
 * **Deletion Anomaly**: Removing one student can also remove important instructor information (e.g., deleting Gajendra removes Rupesh’s info).
 * **Update Anomaly**: If we need to change a title in multiple places but forget some, we create inconsistencies (e.g., different titles for Rupesh).
+
+### [**Database Normalization**](./#id-4.b-discuss-the-purpose-of-the-following-database-normalization-levels)
