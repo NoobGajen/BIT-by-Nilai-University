@@ -129,7 +129,7 @@ SELECT User, Host FROM mysql.user;
 
 * **Command:** Lists all usernames and their corresponding hosts in the MySQL database.
 
-Here are some useful columns you can include while listing users:
+### Here are some useful columns you can include while listing users:
 
 * **`authentication_string`**: Displays the hashed password for the user (if applicable).
 * **`select_priv`**: Indicates whether the user has SELECT privileges.
