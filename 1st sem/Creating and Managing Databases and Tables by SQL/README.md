@@ -4,26 +4,29 @@
 
 SQL commands are essential for interacting with a database. They allow users to perform various actions and manage data effectively. SQL commands are generally categorized into five main types:
 
-1. [**DDL (Data Definition Language):**](./#data-definition-language-ddl) DDL is a set of SQL commands used to create, modify, and delete the structures of a database, such as tables, indexes, and schemas. These commands do not handle data itself but focus on setting up and changing the layout of the database. Typically, these commands are not used by regular users but are handled through applications or by database administrators.
-   * **CREATE**: Defines and creates new database objects like tables, indexes, or schemas.
-   * **ALTER**: Modifies the structure of an existing database object.
-   * **DROP**: Deletes an existing database object, such as a table or index.
-   *   **TRUNCATE**: Removes all rows from a table but does not delete the table itself.
+1.  [**DDL (Data Definition Language)**](./#data-definition-language-ddl)**:** DDL is a set of SQL commands used to create, modify, and delete the structures of a database, such as tables, indexes, and schemas. These commands do not handle data itself but focus on setting up and changing the layout of the database. Typically, these commands are not used by regular users but are handled through applications or by database administrators.
 
 
-2.  [**DQL (Data Query Language):**](./#id-2.2-selecting-record-data-select) DQL consists of SQL commands used to retrieve data from a database. These commands allow users to query and view data based on specific criteria. DQL commands do not alter the database structure or its contents. Typically, these commands are used by end-users to fetch information through applications.
+
+    * **CREATE**: Defines and creates new database objects like tables, indexes, or schemas.
+    * **ALTER**: Modifies the structure of an existing database object.
+    * **DROP**: Deletes an existing database object, such as a table or index.
+    *   **TRUNCATE**: Removes all rows from a table but does not delete the table itself.
+
+
+2.  [**DQL (Data Query Language)**](./#id-2.2-selecting-record-data-select)**:** DQL consists of SQL commands used to retrieve data from a database. These commands allow users to query and view data based on specific criteria. DQL commands do not alter the database structure or its contents. Typically, these commands are used by end-users to fetch information through applications.
 
     * **SELECT**: Retrieves data from one or more tables based on specified criteria.
 
 
-3.  [**DML (Data Manipulation Language):**](./#data-manipulation-language-dml) DML includes SQL commands used to manage and modify the data within a database. This involves adding new records, updating existing records, or deleting records. DML commands focus on the data itself rather than the database structure. These commands are commonly used by both users and applications to interact with data.
+3.  [**DML (Data Manipulation Language)**](./#data-manipulation-language-dml)**:** DML includes SQL commands used to manage and modify the data within a database. This involves adding new records, updating existing records, or deleting records. DML commands focus on the data itself rather than the database structure. These commands are commonly used by both users and applications to interact with data.
 
     * **INSERT**: Adds new rows of data into a table.
     * **UPDATE**: Modifies existing data within a table.
     * **DELETE**: Removes rows from a table based on specified conditions.
 
 
-4.  **DCL (Data Control Language):** DCL commands are used to control access to the data in a database. They manage user permissions and determine what actions users can perform on the data, such as viewing or modifying it. These commands help ensure that only authorized users can access or manipulate the data. DCL commands are generally used by database administrators.
+4.  [**DCL (Data Control Language)**](data-control-language-dcl.md)**:** DCL commands are used to control access to the data in a database. They manage user permissions and determine what actions users can perform on the data, such as viewing or modifying it. These commands help ensure that only authorized users can access or manipulate the data. DCL commands are generally used by database administrators.
 
     * **GRANT**: Provides specific permissions or access rights to users.
     * **REVOKE**: Removes specific permissions or access rights from users.
