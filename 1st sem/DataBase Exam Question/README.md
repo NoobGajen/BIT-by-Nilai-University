@@ -127,16 +127,6 @@ Read the above description carefully. State appropriate assumptions and devise t
 
 **Answer:**&#x20;
 
-#### Example Table: Dentist\_Appointments
-
-| Dentist\_No | Dentist\_Name | Pat\_No | Pat\_Name | Appointment\_Date\_Time | Surgery\_No |
-| ----------- | ------------- | ------- | --------- | ----------------------- | ----------- |
-| 1011        | Zara          | P100    | Aruna     | 12-Jan-17 10:00         | 515         |
-| 1011        | Zara          | P105    | Roziana   | 12-Jan-17 12:00         | 515         |
-| 1024        | Robin         | P108    | Andrew    | 14-Jan-17 12:00         | 510         |
-| 1032        | Wong          | P105    | Aruna     | 12-Jan-17 10:00         | 515         |
-| 1032        | Wong          | P108    | Tiagu     | 14-Jan-17 10:00         | 515         |
-
 #### 1. Insertion Anomaly
 
 An insertion anomaly occurs when we cannot add new data without including unrelated information.
