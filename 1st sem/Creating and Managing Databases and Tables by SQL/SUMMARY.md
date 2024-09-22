@@ -6,3 +6,4 @@
 * [Aggregate Functions in SQL](aggregate-functions-in-mysql.md)
 * [Constraints in SQL](constraints-in-sql.md)
 * [Join in MySQL](types-of-join-in-mysql.md)
+* [Data Control Language (DCL)](data-control-language-dcl.md)
