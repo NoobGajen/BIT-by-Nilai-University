@@ -1,6 +1,6 @@
 # Personal Note
 
-## **Database Approach (DBMS)** vs **File-Based Approach** (Ordered by Importance)
+## **Database Approach (DBMS)** vs **File-Based Approach**
 
 1. **Data Integrity**
    * **DBMS**: Ensures high data integrity with rules and constraints to keep the data accurate and consistent across the system.
