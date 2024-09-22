@@ -98,6 +98,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'gajen'@'localhost' WITH GRANT OPTION;
 * **Command:** Grants all possible privileges on all databases.
 * **User:** `gajen`
 * **Hostname:** `localhost`
+* **Grant Option:** Allows `gajen` to grant these privileges to other users.
 
 ## Revoking Privileges
 
